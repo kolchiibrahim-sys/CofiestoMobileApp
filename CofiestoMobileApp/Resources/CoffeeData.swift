@@ -9,9 +9,9 @@ import Foundation
 import Foundation
 
 struct CoffeeData {
-    static let coffees: [Coffee] = [
-        Coffee(name: "Latte", price: "₼6.50", imageName: "latte"),
-        Coffee(name: "Americano", price: "₼4.50", imageName: "americano"),
-        Coffee(name: "Cappuccino", price: "₼6.00", imageName: "cap")
+    static let coffees: [CoffeeItem] = [
+        CoffeeItem(name: "Latte", price: "₼6.50", imageName: "latte"),
+        CoffeeItem(name: "Americano", price: "₼4.50", imageName: "americano"),
+        CoffeeItem(name: "Cappuccino", price: "₼6.00", imageName: "cap")
     ]
 }
