@@ -6,3 +6,7 @@
 //
 
 import Foundation
+struct CartItem {
+    let coffee: Coffee
+    var quantity: Int
+}

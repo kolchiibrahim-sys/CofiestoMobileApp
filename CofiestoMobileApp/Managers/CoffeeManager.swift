@@ -6,3 +6,9 @@
 //
 
 import Foundation
+class CoffeeManager {
+    static let shared = CoffeeManager()
+    private init() {}
+
+    var coffees: [Coffee] = []
+}

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+class BranchManager {
+    static let shared = BranchManager()
+    private init() {}
+
+    var branches: [Branch] = []
+}

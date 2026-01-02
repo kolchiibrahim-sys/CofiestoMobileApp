@@ -6,3 +6,9 @@
 //
 
 import Foundation
+class CartManager {
+    static let shared = CartManager()
+    private init() {}
+
+    var items: [CartItem] = []
+}

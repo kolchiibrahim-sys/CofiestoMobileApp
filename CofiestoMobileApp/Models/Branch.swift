@@ -6,3 +6,9 @@
 //
 
 import Foundation
+struct Branch {
+    let name: String
+    let address: String
+    let phone: String
+    let workingHours: String
+}
