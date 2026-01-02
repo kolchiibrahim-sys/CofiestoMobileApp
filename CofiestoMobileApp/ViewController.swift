@@ -19,3 +19,6 @@ class ViewController: UIViewController {
 class menu {
     
 }
+class haqqimizda {
+    
+}
