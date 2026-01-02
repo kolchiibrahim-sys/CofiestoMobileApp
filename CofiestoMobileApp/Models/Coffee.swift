@@ -6,10 +6,10 @@
 //
 
 import Foundation
+import Foundation
+
 struct Coffee {
-    let id: Int
     let name: String
-    let price: Double
+    let price: String
     let imageName: String
-    let description: String
 }
