@@ -5,13 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Coffee-->
         <scene sceneID="W0u-7b-dqr">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" title="Coffee" id="D4z-De-grg" customClass="HomeViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" title="Coffee" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D4z-De-grg" customClass="MenuViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o5l-Nf-Gp8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +26,16 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="jez-WI-IMt">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q3K-Al-xur">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dHa-R1-ADy"/>
@@ -44,12 +54,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbI-uX-HTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446.5648854961833" y="-54.225352112676056"/>
+            <point key="canvasLocation" x="303" y="-54"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Hmd-e2-muf">
             <objects>
-                <viewController id="oI6-32-o20" customClass="LoginViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="oI6-32-o20" customClass="LoginViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yNe-Oo-kzP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,6 +90,9 @@
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="oI6-32-o20" eventType="touchUpInside" id="7iq-AR-6s0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N5w-Nt-kIn"/>
@@ -116,7 +129,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b37-QH-5Le" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-473" y="-53"/>
+            <point key="canvasLocation" x="1130.534351145038" y="-54.225352112676056"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="tut-Rk-y3O">
@@ -130,12 +143,31 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="D4z-De-grg" kind="relationship" relationship="rootViewController" id="VKU-YU-Het"/>
+                        <segue destination="7cK-BI-w5K" kind="relationship" relationship="rootViewController" id="VKU-YU-Het"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gY-9w-uHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="-54"/>
+            <point key="canvasLocation" x="1970.2290076335878" y="-54.225352112676056"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xam-3H-bK8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7cK-BI-w5K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5Cb-GW-R3E"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="In9-qM-ZlX">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="D4z-De-grg" kind="relationship" relationship="rootViewController" id="UQ2-CZ-7OI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5D-Fh-GUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-503.05343511450377" y="-54.225352112676056"/>
         </scene>
     </scenes>
     <resources>
@@ -143,10 +175,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

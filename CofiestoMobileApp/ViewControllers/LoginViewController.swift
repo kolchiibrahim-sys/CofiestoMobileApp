@@ -7,25 +7,22 @@
 
 import UIKit
 
+import UIKit
+
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction func loginTapped(_ sender: UIButton) {
-        // user login oldu kimi qeyd edirik
-        UserDefaults.standard.set(true, forKey: "isLoggedIn")
-        goToMainApp()
-    }
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        let menuVC = storyboard?.instantiateViewController(
+            withIdentifier: "MenuViewController"
+        ) as! MenuViewController
 
-    func goToMainApp() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabBar = storyboard.instantiateViewController(
-            withIdentifier: "MainTabBarController"
-        )
-        tabBar.modalPresentationStyle = .fullScreen
-        present(tabBar, animated: true)
+        let nav = UINavigationController(rootViewController: menuVC)
+        nav.modalPresentationStyle = .fullScreen
+
+        present(nav, animated: true)
     }
 }
-
