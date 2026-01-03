@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oI6-32-o20">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Coffee-->
+        <scene sceneID="W0u-7b-dqr">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" title="Coffee" id="D4z-De-grg" customClass="HomeViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o5l-Nf-Gp8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GpJ-i9-hw7">
+                                <rect key="frame" x="0.0" y="172" width="393" height="563"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OHy-aY-H3b">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dHa-R1-ADy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GpJ-i9-hw7" firstAttribute="top" secondItem="dHa-R1-ADy" secondAttribute="top" id="3ge-Uq-Q7I"/>
+                            <constraint firstItem="GpJ-i9-hw7" firstAttribute="trailing" secondItem="dHa-R1-ADy" secondAttribute="trailing" id="HHx-H7-HRC"/>
+                            <constraint firstItem="GpJ-i9-hw7" firstAttribute="leading" secondItem="dHa-R1-ADy" secondAttribute="leading" id="J7G-tI-Rfg"/>
+                            <constraint firstItem="GpJ-i9-hw7" firstAttribute="bottom" secondItem="dHa-R1-ADy" secondAttribute="bottom" id="Ol5-pn-m42"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu" id="hBH-Ln-O9J"/>
+                    <connections>
+                        <outlet property="collectionView" destination="GpJ-i9-hw7" id="3e4-XE-nNs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KbI-uX-HTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446.5648854961833" y="-54.225352112676056"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Hmd-e2-muf">
+            <objects>
+                <viewController id="oI6-32-o20" customClass="LoginViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yNe-Oo-kzP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHz-Iy-RbW">
+                                <rect key="frame" x="32" y="318" width="329" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Nlg-SG-5XU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fkp-cM-YPB">
+                                <rect key="frame" x="32" y="378" width="329" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="X6K-dN-elj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSq-2L-6Gb">
+                                <rect key="frame" x="32" y="446" width="329" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="K3D-GD-Xg7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N5w-Nt-kIn"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="GHz-Iy-RbW" firstAttribute="leading" secondItem="N5w-Nt-kIn" secondAttribute="leading" constant="32" id="7As-Zt-vUm"/>
+                            <constraint firstItem="Fkp-cM-YPB" firstAttribute="leading" secondItem="N5w-Nt-kIn" secondAttribute="leading" constant="32" id="7C1-P6-Ohs"/>
+                            <constraint firstItem="N5w-Nt-kIn" firstAttribute="trailing" secondItem="Fkp-cM-YPB" secondAttribute="trailing" constant="32" id="AIc-5x-XWu"/>
+                            <constraint firstItem="FSq-2L-6Gb" firstAttribute="leading" secondItem="N5w-Nt-kIn" secondAttribute="leading" constant="32" id="LaY-NH-FsV"/>
+                            <constraint firstItem="N5w-Nt-kIn" firstAttribute="trailing" secondItem="GHz-Iy-RbW" secondAttribute="trailing" constant="32" id="NYd-cG-ggH"/>
+                            <constraint firstItem="FSq-2L-6Gb" firstAttribute="top" secondItem="Fkp-cM-YPB" secondAttribute="bottom" constant="24" id="edv-j8-MeA"/>
+                            <constraint firstItem="N5w-Nt-kIn" firstAttribute="trailing" secondItem="FSq-2L-6Gb" secondAttribute="trailing" constant="32" id="k6A-4T-0Ap"/>
+                            <constraint firstItem="Fkp-cM-YPB" firstAttribute="top" secondItem="GHz-Iy-RbW" secondAttribute="bottom" constant="16" id="pT7-v1-Pyb"/>
+                            <constraint firstItem="GHz-Iy-RbW" firstAttribute="top" secondItem="N5w-Nt-kIn" secondAttribute="top" constant="200" id="vsn-IC-xr0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOg-NV-Ea0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1250" y="-54"/>
+        </scene>
+        <!--Main Tab-->
+        <scene sceneID="Fx2-kF-X7u">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="NhQ-Mg-Y1b" customClass="MainTab" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sHh-y8-6US">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yU5-ce-Zis" kind="relationship" relationship="viewControllers" id="24t-dj-q70"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b37-QH-5Le" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-53"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="tut-Rk-y3O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yU5-ce-Zis" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="QOX-lE-ZMT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wdt-ll-t44">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="D4z-De-grg" kind="relationship" relationship="rootViewController" id="VKU-YU-Het"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gY-9w-uHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="483" y="-54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
