@@ -37,7 +37,7 @@
                             <constraint firstItem="GpJ-i9-hw7" firstAttribute="bottom" secondItem="dHa-R1-ADy" secondAttribute="bottom" id="Ol5-pn-m42"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hBH-Ln-O9J"/>
+                    <navigationItem key="navigationItem" title="Menu" id="hBH-Ln-O9J"/>
                     <connections>
                         <outlet property="collectionView" destination="GpJ-i9-hw7" id="3e4-XE-nNs"/>
                     </connections>

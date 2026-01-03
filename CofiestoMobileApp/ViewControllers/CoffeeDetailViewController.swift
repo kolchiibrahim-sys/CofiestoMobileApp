@@ -9,7 +9,7 @@ import UIKit
 
 class CoffeeDetailViewController: UIViewController {
 
-    var coffee: Coffee?
+    var coffee: CoffeeItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()

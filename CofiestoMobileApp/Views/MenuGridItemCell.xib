@@ -14,11 +14,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bD6-7h-ZAs">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bD6-7h-ZAs">
                     <rect key="frame" x="0.0" y="258" width="393" height="526"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Latte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bON-Lz-3kD">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bON-Lz-3kD">
                     <rect key="frame" x="8" y="792" width="37" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
@@ -34,10 +33,16 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="bON-Lz-3kD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="8" symbolic="YES" id="0sX-IV-4Zu"/>
                 <constraint firstItem="bON-Lz-3kD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="1ry-hF-aLK"/>
+                <constraint firstItem="bD6-7h-ZAs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2c0-50-VHI"/>
                 <constraint firstAttribute="bottom" secondItem="ry3-JY-2g2" secondAttribute="bottom" constant="8" id="BbN-Ul-Dgp"/>
+                <constraint firstItem="bON-Lz-3kD" firstAttribute="top" secondItem="bD6-7h-ZAs" secondAttribute="bottom" constant="8" symbolic="YES" id="G6n-Df-dQF"/>
+                <constraint firstAttribute="trailing" secondItem="bD6-7h-ZAs" secondAttribute="trailing" id="NLy-0t-LSn"/>
                 <constraint firstItem="ry3-JY-2g2" firstAttribute="leading" secondItem="bON-Lz-3kD" secondAttribute="trailing" constant="8" id="ahI-ro-5K3"/>
+                <constraint firstItem="bON-Lz-3kD" firstAttribute="top" secondItem="bD6-7h-ZAs" secondAttribute="bottom" constant="8" id="bil-sQ-1II"/>
                 <constraint firstItem="ry3-JY-2g2" firstAttribute="leading" secondItem="bON-Lz-3kD" secondAttribute="trailing" constant="8" id="gh7-8C-dKm"/>
+                <constraint firstItem="bD6-7h-ZAs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="140" id="oot-UH-KjM"/>
             </constraints>
             <point key="canvasLocation" x="-671" y="-133"/>
         </view>
