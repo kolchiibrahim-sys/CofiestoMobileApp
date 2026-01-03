@@ -9,5 +9,5 @@ import Foundation
 struct CoffeeItem {
     let name: String
     let prices: [String]
-    let imageName: String?
+    let imageName: String
 }

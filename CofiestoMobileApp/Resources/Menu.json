@@ -1,0 +1,129 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Basic Coffee",
+      "type": "sizeable",
+      "items": [
+        {
+          "id": 101,
+          "name": "Americano",
+          "prices": {
+            "S": 5.20,
+            "M": 5.90,
+            "L": 6.40
+          },
+          "image": "americano"
+        },
+        {
+          "id": 102,
+          "name": "Latte",
+          "prices": {
+            "S": 6.10,
+            "M": 6.90,
+            "L": 7.90
+          },
+          "image": "latte"
+        },
+        {
+          "id": 103,
+          "name": "Latte Macchiato",
+          "prices": {
+            "S": 5.90,
+            "M": 6.90,
+            "L": 7.70
+          },
+          "image": "latte_macchiato"
+        },
+        {
+          "id": 104,
+          "name": "Cappuccino",
+          "prices": {
+            "S": 6.10,
+            "M": 6.90,
+            "L": 7.70
+          },
+          "image": "cappuccino"
+        },
+        {
+          "id": 105,
+          "name": "Chai Tea Latte",
+          "prices": {
+            "S": 6.50,
+            "M": 7.30,
+            "L": 8.30
+          },
+          "image": "chai_latte"
+        },
+        {
+          "id": 106,
+          "name": "Raf",
+          "prices": {
+            "S": 6.90,
+            "M": 7.90,
+            "L": 8.90
+          },
+          "image": "raf"
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "Hot Special",
+      "type": "single",
+      "items": [
+        { "id": 201, "name": "Raf Lavender", "price": 8.20, "image": "raf_lavender" },
+        { "id": 202, "name": "Raf Coconut", "price": 8.20, "image": "raf_coconut" },
+        { "id": 203, "name": "Raf Macadamia", "price": 8.20, "image": "raf_macadamia" },
+        { "id": 204, "name": "Spanish Latte", "price": 8.20, "image": "spanish_latte" },
+        { "id": 205, "name": "Matcha Latte", "price": 7.30, "image": "matcha_latte" }
+      ]
+    },
+
+    {
+      "id": 3,
+      "title": "Limited Edition Drinks",
+      "type": "single",
+      "items": [
+        { "id": 301, "name": "Affogato Pistachio", "price": 12.50, "image": "affogato_pistachio" },
+        { "id": 302, "name": "Berry Milk", "price": 11.90, "image": "berry_milk" },
+        { "id": 303, "name": "Cherry Matcha", "price": 12.50, "image": "cherry_matcha" },
+        { "id": 304, "name": "Detox", "price": 9.50, "image": "detox" },
+        { "id": 305, "name": "Pistachio Espresso", "price": 12.50, "image": "pistachio_espresso" },
+        { "id": 306, "name": "Pistachio Latte", "price": 10.90, "image": "pistachio_latte" },
+        { "id": 307, "name": "Cucumber Lime", "price": 9.40, "image": "cucumber_lime" },
+        { "id": 308, "name": "Watermelon Strawberry", "price": 9.40, "image": "watermelon_strawberry" }
+      ]
+    },
+
+    {
+      "id": 4,
+      "title": "Sandwiches",
+      "type": "single",
+      "items": [
+        { "id": 401, "name": "Ciabatta Chicken", "price": 9.90, "image": "ciabatta_chicken" },
+        { "id": 402, "name": "Ciabatta Salami", "price": 9.90, "image": "ciabatta_salami" },
+        { "id": 403, "name": "Croissant Chicken", "price": 10.50, "image": "croissant_chicken" },
+        { "id": 404, "name": "Croissant Salmon", "price": 12.50, "image": "croissant_salmon" },
+        { "id": 405, "name": "Poke Salmon", "price": 14.50, "image": "poke_salmon" },
+        { "id": 406, "name": "Caesar Salad Chicken", "price": 12.50, "image": "caesar_chicken" }
+      ]
+    },
+
+    {
+      "id": 5,
+      "title": "Extra Bar",
+      "type": "single",
+      "items": [
+        { "id": 501, "name": "Almond Milk", "price": 3.00 },
+        { "id": 502, "name": "Oat Milk", "price": 3.00 },
+        { "id": 503, "name": "Ice Cream", "price": 3.00 },
+        { "id": 504, "name": "Espresso Shot", "price": 2.00 },
+        { "id": 505, "name": "Lemon Fresh", "price": 1.00 },
+        { "id": 506, "name": "Whipped Cream", "price": 1.20 }
+      ]
+    }
+  ]
+}
+

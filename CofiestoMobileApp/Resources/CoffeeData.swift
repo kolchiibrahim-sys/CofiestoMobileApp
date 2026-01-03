@@ -6,12 +6,26 @@
 //
 
 import Foundation
-import Foundation
 
 struct CoffeeData {
     static let coffees: [CoffeeItem] = [
-        CoffeeItem(name: "Latte", price: "₼6.50", imageName: "latte"),
-        CoffeeItem(name: "Americano", price: "₼4.50", imageName: "americano"),
-        CoffeeItem(name: "Cappuccino", price: "₼6.00", imageName: "cap")
+
+        CoffeeItem(
+            name: "Latte",
+            prices: ["6.50", "6.90", "7.90"],
+            imageName: "Latte"
+        ),
+
+        CoffeeItem(
+            name: "Americano",
+            prices: ["4.50"],
+            imageName: "Americano"
+        ),
+
+        CoffeeItem(
+            name: "Cappuccino",
+            prices: ["6.00", "6.50", "7.20"],
+            imageName: "Cappucino"
+        )
     ]
 }
