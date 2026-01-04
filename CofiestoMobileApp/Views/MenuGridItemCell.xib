@@ -48,6 +48,11 @@
                 <constraint firstItem="bON-Lz-3kD" firstAttribute="top" secondItem="bD6-7h-ZAs" secondAttribute="bottom" constant="8" id="SBy-WO-42p"/>
                 <constraint firstItem="bON-Lz-3kD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="ZVm-1T-mQr"/>
             </constraints>
+            <connections>
+                <outlet property="imageView" destination="bD6-7h-ZAs" id="2Yv-G7-wGO"/>
+                <outlet property="nameLabel" destination="bON-Lz-3kD" id="xsO-hZ-OAf"/>
+                <outlet property="priceLabel" destination="La9-In-nPH" id="icV-rV-qiq"/>
+            </connections>
             <point key="canvasLocation" x="-672.51908396946567" y="-133.09859154929578"/>
         </view>
     </objects>

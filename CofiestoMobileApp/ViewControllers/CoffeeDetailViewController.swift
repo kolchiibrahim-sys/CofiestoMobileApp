@@ -9,11 +9,21 @@ import UIKit
 
 class CoffeeDetailViewController: UIViewController {
 
-    var coffee: CoffeeItem?
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+
+    var coffee: CoffeeItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        title = coffee?.name
+        setupUI()
+    }
+
+    private func setupUI() {
+        title = coffee.name
+        nameLabel.text = coffee.name
+        priceLabel.text = coffee.price.first
+        imageView.image = UIImage(named: coffee.imageName)
     }
 }

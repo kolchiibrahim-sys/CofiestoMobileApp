@@ -12,19 +12,19 @@ struct CoffeeData {
 
         CoffeeItem(
             name: "Latte",
-            prices: ["6.50", "6.90", "7.90"],
+            price: ["6.50", "6.90", "7.90"],
             imageName: "Latte"
         ),
 
         CoffeeItem(
             name: "Americano",
-            prices: ["4.50"],
+            price: ["4.50"],
             imageName: "Americano"
         ),
 
         CoffeeItem(
             name: "Cappuccino",
-            prices: ["6.00", "6.50", "7.20"],
+            price: ["6.00", "6.50", "7.20"],
             imageName: "Cappucino"
         )
     ]
