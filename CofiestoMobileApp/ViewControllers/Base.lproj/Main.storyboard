@@ -69,6 +69,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Nlg-SG-5XU"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -96,7 +97,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N5w-Nt-kIn"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" red="0.15800332300946418" green="0.31269974806874068" blue="0.16114469887490948" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="GHz-Iy-RbW" firstAttribute="leading" secondItem="N5w-Nt-kIn" secondAttribute="leading" constant="32" id="7As-Zt-vUm"/>
                             <constraint firstItem="Fkp-cM-YPB" firstAttribute="leading" secondItem="N5w-Nt-kIn" secondAttribute="leading" constant="32" id="7C1-P6-Ohs"/>
@@ -112,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOg-NV-Ea0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1250" y="-54"/>
+            <point key="canvasLocation" x="-1251.145038167939" y="-54.225352112676056"/>
         </scene>
         <!--Main Tab-->
         <scene sceneID="Fx2-kF-X7u">
