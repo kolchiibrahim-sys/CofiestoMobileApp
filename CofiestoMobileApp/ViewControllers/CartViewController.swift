@@ -9,21 +9,42 @@ import UIKit
 
 class CartViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Cart"
 
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
-    */
+}
+extension CartViewController: UITableViewDataSource {
 
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return CartManager.shared.items.count
+    }
+
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath)
+    -> UITableViewCell {
+
+        let cell = UITableViewCell(style: .subtitle,
+                                   reuseIdentifier: "cell")
+
+        let item = CartManager.shared.items[indexPath.row]
+
+        cell.textLabel?.text = item.coffee.name
+        cell.detailTextLabel?.text = "Quantity: \(item.quantity)"
+
+        return cell
+    }
+}
+extension CartViewController: UITableViewDelegate {
 }
