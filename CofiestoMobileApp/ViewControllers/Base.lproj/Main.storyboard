@@ -223,7 +223,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addToCartButton" destination="zir-2G-eaQ" id="3JS-UU-swX"/>
+                        <outlet property="addToCartButton" destination="zir-2G-eaQ" id="qt5-5U-jTx"/>
                         <outlet property="imageView" destination="aNh-0G-TSm" id="4uo-I2-Rcj"/>
                         <outlet property="nameLabel" destination="hFt-Yu-b8h" id="qQB-vF-spg"/>
                         <outlet property="priceLabel" destination="J8h-nf-Rhp" id="cUY-LJ-hkO"/>
