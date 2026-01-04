@@ -6,18 +6,16 @@
 //
 
 import UIKit
-var coffee: CoffeeItem!
+
 class CoffeeDetailViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var coffeeImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
+
     var coffee: CoffeeItem!
-    @IBAction func addToCartTapped(_ sender: UIButton) {
-        CartManager.shared.add(coffee: coffee)
-        showAddedAlert()
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -27,16 +25,22 @@ class CoffeeDetailViewController: UIViewController {
         title = coffee.name
         nameLabel.text = coffee.name
         priceLabel.text = coffee.price.first
-        imageView.image = UIImage(named: coffee.imageName)
+        coffeeImageView.image = UIImage(named: coffee.imageName)
     }
-}
-private func showAddedAlert() {
-    let alert = UIAlertController(
-        title: "Added to Cart",
-        message: "\(coffee.name) added successfully",
-        preferredStyle: .alert
-    )
 
-    alert.addAction(UIAlertAction(title: "OK", style: .default))
-    present(alert, animated: true)
+    @IBAction func addToCartTapped(_ sender: UIButton) {
+        CartManager.shared.add(coffee: coffee)
+        showAddedAlert()
+    }
+
+    private func showAddedAlert() {
+        let alert = UIAlertController(
+            title: "Added to Cart",
+            message: "\(coffee.name) added successfully",
+            preferredStyle: .alert
+        )
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
 }

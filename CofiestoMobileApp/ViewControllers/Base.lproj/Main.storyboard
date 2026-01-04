@@ -203,6 +203,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add To Cart"/>
+                                <connections>
+                                    <action selector="addToCartTapped:" destination="Gib-oA-xn0" eventType="touchUpInside" id="o9d-Kz-jI6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LvH-pV-42d"/>
@@ -223,10 +226,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addToCartButton" destination="zir-2G-eaQ" id="qt5-5U-jTx"/>
+                        <outlet property="addToCartButton" destination="zir-2G-eaQ" id="i1H-dg-XNg"/>
+                        <outlet property="coffeeImageView" destination="aNh-0G-TSm" id="pPF-3n-avb"/>
                         <outlet property="imageView" destination="aNh-0G-TSm" id="4uo-I2-Rcj"/>
-                        <outlet property="nameLabel" destination="hFt-Yu-b8h" id="qQB-vF-spg"/>
-                        <outlet property="priceLabel" destination="J8h-nf-Rhp" id="cUY-LJ-hkO"/>
+                        <outlet property="nameLabel" destination="hFt-Yu-b8h" id="uQj-QM-OXP"/>
+                        <outlet property="priceLabel" destination="J8h-nf-Rhp" id="9eJ-Vb-3XK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHe-mj-X01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
