@@ -195,14 +195,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zir-2G-eaQ">
+                                <rect key="frame" x="-16" y="447" width="438" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SvQ-tp-PUh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add To Cart"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LvH-pV-42d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="J8h-nf-Rhp" firstAttribute="leading" secondItem="LvH-pV-42d" secondAttribute="leading" constant="16" id="1U1-HH-NtG"/>
+                            <constraint firstItem="zir-2G-eaQ" firstAttribute="leading" secondItem="LvH-pV-42d" secondAttribute="leading" constant="-16" id="4V0-fP-VAE"/>
                             <constraint firstItem="LvH-pV-42d" firstAttribute="trailing" secondItem="hFt-Yu-b8h" secondAttribute="trailing" constant="16" id="J6p-pB-zgV"/>
+                            <constraint firstItem="zir-2G-eaQ" firstAttribute="top" secondItem="J8h-nf-Rhp" secondAttribute="bottom" constant="16" id="UZx-Pw-c34"/>
                             <constraint firstItem="hFt-Yu-b8h" firstAttribute="top" secondItem="aNh-0G-TSm" secondAttribute="bottom" constant="16" id="aPF-9a-tWk"/>
                             <constraint firstItem="aNh-0G-TSm" firstAttribute="leading" secondItem="LvH-pV-42d" secondAttribute="leading" id="cGa-0M-9id"/>
+                            <constraint firstItem="LvH-pV-42d" firstAttribute="trailing" secondItem="zir-2G-eaQ" secondAttribute="trailing" constant="-29" id="fHA-49-b1a"/>
                             <constraint firstItem="LvH-pV-42d" firstAttribute="trailing" secondItem="aNh-0G-TSm" secondAttribute="trailing" id="kPv-sI-1qI"/>
                             <constraint firstItem="J8h-nf-Rhp" firstAttribute="top" secondItem="hFt-Yu-b8h" secondAttribute="bottom" constant="8" id="wQy-1W-2ZO"/>
                             <constraint firstItem="hFt-Yu-b8h" firstAttribute="leading" secondItem="LvH-pV-42d" secondAttribute="leading" constant="16" id="wqr-CF-ws4"/>
@@ -210,6 +221,11 @@
                             <constraint firstItem="LvH-pV-42d" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J8h-nf-Rhp" secondAttribute="trailing" symbolic="YES" id="zca-ee-Ovc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="aNh-0G-TSm" id="4uo-I2-Rcj"/>
+                        <outlet property="nameLabel" destination="hFt-Yu-b8h" id="qQB-vF-spg"/>
+                        <outlet property="priceLabel" destination="J8h-nf-Rhp" id="cUY-LJ-hkO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHe-mj-X01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
