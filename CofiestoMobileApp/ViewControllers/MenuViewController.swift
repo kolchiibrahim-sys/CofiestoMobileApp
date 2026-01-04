@@ -6,7 +6,9 @@
 //
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController,
+                          UICollectionViewDelegate,
+                          UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -16,23 +18,28 @@ class MenuViewController: UIViewController {
 
         collectionView.delegate = self
         collectionView.dataSource = self
-    }
-}
-extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
+        let nib = UINib(nibName: "MenuGridItemCell", bundle: nil)
+        collectionView.register(nib,
+                                forCellWithReuseIdentifier: "MenuGridItemCell")
+    }
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return CoffeeData.coffees.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+                        cellForItemAt indexPath: IndexPath)
+    -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "Cell",
+            withReuseIdentifier: "MenuGridItemCell",
             for: indexPath
-        )
-        cell.backgroundColor = .systemBrown
+        ) as! MenuGridItemCell
+
+        let item = CoffeeData.coffees[indexPath.item]
+        cell.configure(with: item)
+
         return cell
     }
 }

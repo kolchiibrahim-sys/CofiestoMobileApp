@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-// ⚠️ BAX BU HİSSƏ CLASS-DAN KƏNARDA OLMALIDIR
+
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView,

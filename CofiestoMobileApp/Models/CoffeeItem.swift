@@ -8,6 +8,6 @@
 import Foundation
 struct CoffeeItem {
     let name: String
-    let prices: [String]
+    let price: [String]
     let imageName: String
 }
