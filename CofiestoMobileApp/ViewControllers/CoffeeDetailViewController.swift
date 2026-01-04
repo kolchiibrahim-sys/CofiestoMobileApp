@@ -6,13 +6,13 @@
 //
 
 import UIKit
-
+var coffee: CoffeeItem!
 class CoffeeDetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-
+    @IBOutlet weak var addToCartButton: UIButton!
     var coffee: CoffeeItem!
 
     override func viewDidLoad() {
