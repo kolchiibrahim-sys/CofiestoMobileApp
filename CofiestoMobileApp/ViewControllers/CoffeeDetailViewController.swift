@@ -9,38 +9,28 @@ import UIKit
 
 class CoffeeDetailViewController: UIViewController {
 
-    @IBOutlet weak var coffeeImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
 
-    var coffee: CoffeeItem!
+    var item: CoffeeItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        title = item.name
+        configureUI()
     }
 
-    private func setupUI() {
-        title = coffee.name
-        nameLabel.text = coffee.name
-        priceLabel.text = coffee.price.first
-        coffeeImageView.image = UIImage(named: coffee.imageName)
+    private func configureUI() {
+        imageView.image = UIImage(named: item.imageName)
+        nameLabel.text = item.name
+        priceLabel.text = item.price.first
+        addToCartButton.layer.cornerRadius = 12
     }
 
     @IBAction func addToCartTapped(_ sender: UIButton) {
-        CartManager.shared.add(coffee: coffee)
-        showAddedAlert()
-    }
-
-    private func showAddedAlert() {
-        let alert = UIAlertController(
-            title: "Added to Cart",
-            message: "\(coffee.name) added successfully",
-            preferredStyle: .alert
-        )
-
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alert, animated: true)
+        CartManager.shared.add(coffee: item)
+        navigationController?.popViewController(animated: true)
     }
 }

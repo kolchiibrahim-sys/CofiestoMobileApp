@@ -24,7 +24,7 @@ class MenuViewController: UIViewController {
     }
 }
 
-extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return MenuData.menu.count
@@ -50,26 +50,43 @@ extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 
     func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+
+        let item = MenuData.menu[indexPath.section].items[indexPath.item]
+
+        let vc = CoffeeDetailViewController(
+            nibName: "CoffeeDetailViewController",
+            bundle: nil
+        )
+        vc.item = item
+
+        // ⬇️ BURDA navigationController TAM DÜZGÜN SCOPE-DADIR
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let width = (collectionView.frame.width - 24) / 2
+        let width = (collectionView.frame.width - 48) / 2
         return CGSize(width: width, height: 220)
     }
-}
-func collectionView(_ collectionView: UICollectionView,
-                    layout collectionViewLayout: UICollectionViewLayout,
-                    minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return 16
-}
 
-func collectionView(_ collectionView: UICollectionView,
-                    layout collectionViewLayout: UICollectionViewLayout,
-                    minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return 16
-}
-func collectionView(_ collectionView: UICollectionView,
-                    layout collectionViewLayout: UICollectionViewLayout,
-                    insetForSectionAt section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 16
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 16
+    }
 }
