@@ -6,9 +6,20 @@
 //
 
 import Foundation
+
 class CoffeeManager {
+
     static let shared = CoffeeManager()
+
     private init() {}
 
-    var coffees: [CoffeeItem] = []
+    func loadMenu() {
+        // Hələlik mock data
+        MenuData.menu = [
+            MenuCategory(
+                title: "Basic Coffee",
+                items: CoffeeData.coffees
+            )
+        ]
+    }
 }

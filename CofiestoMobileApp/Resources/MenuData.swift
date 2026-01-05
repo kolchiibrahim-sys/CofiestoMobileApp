@@ -7,5 +7,5 @@
 
 import Foundation
 struct MenuData {
-    static let menu: [MenuCategory] = []
+    static var menu: [MenuCategory] = []
 }

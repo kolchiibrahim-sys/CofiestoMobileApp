@@ -6,13 +6,21 @@
 //
 
 import Foundation
+import Foundation
+
+enum MenuLayout {
+    case grid
+    case list
+}
+
 struct MenuCategory {
     let title: String
     let items: [CoffeeItem]
     let layout: MenuLayout
-}
 
-enum MenuLayout {
-    case list
-    case grid
+    init(title: String, items: [CoffeeItem], layout: MenuLayout = .grid) {
+        self.title = title
+        self.items = items
+        self.layout = layout
+    }
 }

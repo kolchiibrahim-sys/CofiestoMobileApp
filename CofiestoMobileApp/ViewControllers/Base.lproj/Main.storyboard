@@ -203,7 +203,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25O-l4-GVx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1127" y="379"/>
+            <point key="canvasLocation" x="-1978" y="390"/>
         </scene>
         <!--Main Tab-->
         <scene sceneID="Fx2-kF-X7u">
@@ -258,7 +258,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5D-Fh-GUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302" y="-450"/>
+            <point key="canvasLocation" x="-393" y="-786"/>
         </scene>
         <!--Coffee Detail View Controller-->
         <scene sceneID="DlI-6B-AZP">
