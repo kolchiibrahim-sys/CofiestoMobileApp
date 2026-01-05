@@ -26,6 +26,13 @@ class CartManager {
     }
 
     func totalItemsCount() -> Int {
-        return items.reduce(0) { $0 + $1.quantity }
+        return items.reduce(0) { $0 + $1.quantity
+        }
+    }
+}
+extension CartManager {
+
+    var totalItemsCount: Int {
+        items.reduce(0) { $0 + $1.quantity }
     }
 }

@@ -10,10 +10,14 @@ class MenuViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // 🛒 Cart button
+    private var cartButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Menu"
 
+        // 📦 Load menu data
         CoffeeManager.shared.loadMenu()
 
         collectionView.delegate = self
@@ -21,10 +25,66 @@ class MenuViewController: UIViewController {
 
         let nib = UINib(nibName: "MenuGridItemCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "MenuGridItemCell")
+
+        // 🛒 Cart button setup
+        setupCartButton()
+    }
+
+    // 🔄 Badge refresh
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateCartBadge()
     }
 }
 
-extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+// MARK: - Cart Button
+extension MenuViewController {
+
+    private func setupCartButton() {
+        cartButton = UIButton(type: .custom)
+        cartButton.setImage(UIImage(systemName: "cart"), for: .normal)
+        cartButton.addTarget(self, action: #selector(cartTapped), for: .touchUpInside)
+
+        let barButton = UIBarButtonItem(customView: cartButton)
+        navigationItem.rightBarButtonItem = barButton
+
+        updateCartBadge()
+    }
+
+    private func updateCartBadge() {
+        let count = CartManager.shared.totalItemsCount
+
+        // əvvəlki badge-i sil
+        cartButton.subviews
+            .filter { $0.tag == 999 }
+            .forEach { $0.removeFromSuperview() }
+
+        guard count > 0 else { return }
+
+        let badgeLabel = UILabel()
+        badgeLabel.tag = 999
+        badgeLabel.text = "\(count)"
+        badgeLabel.font = .systemFont(ofSize: 12, weight: .bold)
+        badgeLabel.textColor = .white
+        badgeLabel.backgroundColor = .systemRed
+        badgeLabel.textAlignment = .center
+        badgeLabel.frame = CGRect(x: 16, y: -6, width: 18, height: 18)
+        badgeLabel.layer.cornerRadius = 9
+        badgeLabel.clipsToBounds = true
+
+        cartButton.addSubview(badgeLabel)
+    }
+
+    @objc private func cartTapped() {
+        let vc = CartViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+// MARK: - CollectionView
+extension MenuViewController: UICollectionViewDelegate,
+                              UICollectionViewDataSource,
+                              UICollectionViewDelegateFlowLayout {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return MenuData.menu.count
@@ -60,7 +120,7 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         )
         vc.item = item
 
-        // ⬇️ BURDA navigationController TAM DÜZGÜN SCOPE-DADIR
+        // ✅ navigationController burada 100% düzgündür
         navigationController?.pushViewController(vc, animated: true)
     }
 
