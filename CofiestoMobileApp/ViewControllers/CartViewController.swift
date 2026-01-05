@@ -4,9 +4,6 @@
 //
 //  Created by Kolchı Ibrahım on 02.01.26.
 //
-
-import UIKit
-
 import UIKit
 
 class CartViewController: UIViewController {
@@ -29,17 +26,25 @@ class CartViewController: UIViewController {
         updateTotal()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        updateTotal()
+    }
+
     private func updateTotal() {
-        let total = CartManager.shared.items.reduce(0) {
-            $0 + (Double($1.quantity) * $1.coffee.price)
+        let total = CartManager.shared.items.reduce(0.0) {
+            $0 + Double($1.quantity) * $1.coffee.price
         }
         totalLabel.text = "Total: $\(String(format: "%.2f", total))"
     }
 }
 
+// MARK: - UITableViewDataSource
 extension CartViewController: UITableViewDataSource {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
         CartManager.shared.items.count
     }
 
@@ -61,10 +66,7 @@ extension CartViewController: UITableViewDataSource {
         }
 
         cell.onMinusTapped = { [weak self] in
-            CartManager.shared.items[indexPath.row].quantity -= 1
-            if CartManager.shared.items[indexPath.row].quantity <= 0 {
-                CartManager.shared.remove(at: indexPath.row)
-            }
+            CartManager.shared.decrease(coffee: item.coffee)
             tableView.reloadData()
             self?.updateTotal()
         }
@@ -73,7 +75,9 @@ extension CartViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension CartViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
         80

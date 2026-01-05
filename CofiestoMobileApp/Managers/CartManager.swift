@@ -7,13 +7,12 @@
 
 import Foundation
 
-import Foundation
-
 class CartManager {
 
     static let shared = CartManager()
     private init() {}
 
+   
     private(set) var items: [CartItem] = []
 
     func add(coffee: CoffeeItem) {
@@ -25,6 +24,18 @@ class CartManager {
         }
     }
 
+    func decrease(coffee: CoffeeItem) {
+        guard let index = items.firstIndex(where: { $0.coffee.id == coffee.id }) else {
+            return
+        }
+
+        items[index].quantity -= 1
+
+        if items[index].quantity <= 0 {
+            items.remove(at: index)
+        }
+    }
+
     func remove(at index: Int) {
         items.remove(at: index)
     }
@@ -33,8 +44,8 @@ class CartManager {
         items.removeAll()
     }
 
- 
     var totalItemsCount: Int {
         items.reduce(0) { $0 + $1.quantity }
     }
 }
+

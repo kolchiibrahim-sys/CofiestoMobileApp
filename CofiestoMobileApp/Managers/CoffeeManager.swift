@@ -14,7 +14,6 @@ class CoffeeManager {
     private init() {}
 
     func loadMenu() {
-        // Hələlik mock data
         MenuData.menu = [
             MenuCategory(
                 title: "Basic Coffee",

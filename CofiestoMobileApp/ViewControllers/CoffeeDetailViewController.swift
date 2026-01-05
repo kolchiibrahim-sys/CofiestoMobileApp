@@ -25,7 +25,7 @@ class CoffeeDetailViewController: UIViewController {
     private func configureUI() {
         imageView.image = UIImage(named: item.imageName)
         nameLabel.text = item.name
-        priceLabel.text = item.price.first
+        priceLabel.text = item.price.description
         addToCartButton.layer.cornerRadius = 12
     }
 
