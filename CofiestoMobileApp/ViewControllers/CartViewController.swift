@@ -7,9 +7,12 @@
 
 import UIKit
 
+import UIKit
+
 class CartViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var totalLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,34 +20,62 @@ class CartViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
+
+        tableView.register(
+            UINib(nibName: "CartCell", bundle: nil),
+            forCellReuseIdentifier: "CartCell"
+        )
+
+        updateTotal()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
+    private func updateTotal() {
+        let total = CartManager.shared.items.reduce(0) {
+            $0 + (Double($1.quantity) * $1.coffee.price)
+        }
+        totalLabel.text = "Total: $\(String(format: "%.2f", total))"
     }
 }
+
 extension CartViewController: UITableViewDataSource {
 
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
-        return CartManager.shared.items.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        CartManager.shared.items.count
     }
 
     func tableView(_ tableView: UITableView,
-                   cellForRowAt indexPath: IndexPath)
-    -> UITableViewCell {
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = UITableViewCell(style: .subtitle,
-                                   reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "CartCell",
+            for: indexPath
+        ) as! CartCell
 
         let item = CartManager.shared.items[indexPath.row]
+        cell.configure(with: item)
 
-        cell.textLabel?.text = item.coffee.name
-        cell.detailTextLabel?.text = "Quantity: \(item.quantity)"
+        cell.onPlusTapped = { [weak self] in
+            CartManager.shared.add(coffee: item.coffee)
+            tableView.reloadData()
+            self?.updateTotal()
+        }
+
+        cell.onMinusTapped = { [weak self] in
+            CartManager.shared.items[indexPath.row].quantity -= 1
+            if CartManager.shared.items[indexPath.row].quantity <= 0 {
+                CartManager.shared.remove(at: indexPath.row)
+            }
+            tableView.reloadData()
+            self?.updateTotal()
+        }
 
         return cell
     }
 }
+
 extension CartViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView,
+                   heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
+    }
 }
