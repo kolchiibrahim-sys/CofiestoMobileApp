@@ -54,7 +54,7 @@ extension MenuViewController {
     private func updateCartBadge() {
         let count = CartManager.shared.totalItemsCount
 
-        // əvvəlki badge-i sil
+       
         cartButton.subviews
             .filter { $0.tag == 999 }
             .forEach { $0.removeFromSuperview() }
@@ -63,7 +63,7 @@ extension MenuViewController {
 
         let badgeLabel = UILabel()
         badgeLabel.tag = 999
-        badgeLabel.text = "\(count)"
+        badgeLabel.text = "\(String(describing: count))"
         badgeLabel.font = .systemFont(ofSize: 12, weight: .bold)
         badgeLabel.textColor = .white
         badgeLabel.backgroundColor = .systemRed

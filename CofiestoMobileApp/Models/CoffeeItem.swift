@@ -10,4 +10,5 @@ struct CoffeeItem {
     let name: String
     let price: [String]
     let imageName: String
+    let id: UUID
 }

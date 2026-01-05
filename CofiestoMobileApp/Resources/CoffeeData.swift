@@ -13,19 +13,19 @@ struct CoffeeData {
         CoffeeItem(
             name: "Latte",
             price: ["6.50", "6.90", "7.90"],
-            imageName: "Latte"
+            imageName: "Latte", id:UUID()
         ),
 
         CoffeeItem(
             name: "Americano",
             price: ["4.50"],
-            imageName: "Americano"
+            imageName: "Americano", id:UUID()
         ),
 
         CoffeeItem(
             name: "Cappuccino",
             price: ["6.00", "6.50", "7.20"],
-            imageName: "Cappucino"
+            imageName: "Cappucino", id:UUID()
         )
     ]
 }
