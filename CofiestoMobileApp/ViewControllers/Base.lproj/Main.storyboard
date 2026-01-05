@@ -56,6 +56,21 @@
             </objects>
             <point key="canvasLocation" x="303" y="-54"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eeb-AH-wMe">
+            <objects>
+                <viewController id="St6-eL-ak7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ixp-LX-YgR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sZC-zW-rwN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iw1-J0-WnE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1999" y="-54"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="Hmd-e2-muf">
             <objects>
@@ -197,62 +212,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5D-Fh-GUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="302" y="-450"/>
-        </scene>
-        <!--Cart View Controller-->
-        <scene sceneID="IiU-bK-d41">
-            <objects>
-                <viewController storyboardIdentifier="CartViewController" id="L8c-qe-xYS" customClass="CartViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ydk-ln-ufs">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WRg-Tb-bE7">
-                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9O-do-GmY">
-                                <rect key="frame" x="0.0" y="118" width="393" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="mL2-1r-3XT"/>
-                                </constraints>
-                            </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzA-Uo-U87">
-                                <rect key="frame" x="259" y="141" width="97" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Checkout"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYs-AC-GCf">
-                                <rect key="frame" x="125" y="165" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0 ₼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Tg-Yd-gh6">
-                                <rect key="frame" x="32" y="155" width="25" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ekv-ht-w5U"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0Tg-Yd-gh6" firstAttribute="leading" secondItem="Ekv-ht-w5U" secondAttribute="leading" constant="16" id="2fQ-ak-oCu"/>
-                            <constraint firstItem="Ekv-ht-w5U" firstAttribute="trailing" secondItem="WRg-Tb-bE7" secondAttribute="trailing" id="Fbc-zZ-QNt"/>
-                            <constraint firstItem="X9O-do-GmY" firstAttribute="trailing" secondItem="Ekv-ht-w5U" secondAttribute="trailing" id="J3V-Al-d9d"/>
-                            <constraint firstItem="Ekv-ht-w5U" firstAttribute="bottom" secondItem="WRg-Tb-bE7" secondAttribute="bottom" id="adP-Vx-XNi"/>
-                            <constraint firstItem="X9O-do-GmY" firstAttribute="top" secondItem="Ekv-ht-w5U" secondAttribute="top" id="bgb-d8-FaY"/>
-                            <constraint firstItem="WRg-Tb-bE7" firstAttribute="leading" secondItem="Ekv-ht-w5U" secondAttribute="leading" id="elI-ck-KVg"/>
-                            <constraint firstItem="X9O-do-GmY" firstAttribute="leading" secondItem="Ekv-ht-w5U" secondAttribute="leading" id="nm4-a2-z5A"/>
-                            <constraint firstItem="WRg-Tb-bE7" firstAttribute="top" secondItem="Ekv-ht-w5U" secondAttribute="top" id="xuz-IE-oSs"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ylf-PM-iEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1251" y="-733"/>
         </scene>
         <!--Coffee Detail View Controller-->
         <scene sceneID="DlI-6B-AZP">
