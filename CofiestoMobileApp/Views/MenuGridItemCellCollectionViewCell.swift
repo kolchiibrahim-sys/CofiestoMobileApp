@@ -14,7 +14,7 @@ class MenuGridItemCell: UICollectionViewCell {
 
     func configure(with item: CoffeeItem) {
         nameLabel.text = item.name
-        priceLabel.text = item.price.first
+        priceLabel.text = item.price.description
         imageView.image = UIImage(named: item.imageName)
     }
 }

@@ -113,6 +113,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="G7d-DO-wAI"/>
+                    <connections>
+                        <outlet property="collectionView" destination="eao-4s-csm" id="y7B-lU-guw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V12-lW-bLs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,7 +149,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="addToCartButton"/>
                                 <connections>
-                                    <action selector="addToCartTapped:" destination="kwX-5x-kDt" eventType="touchUpInside" id="CqT-Ey-vR6"/>
+                                    <action selector="addToCartTapped:" destination="kwX-5x-kDt" eventType="touchUpInside" id="9hg-JA-Rwk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dq-O8-lbh">
@@ -174,10 +177,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addToCartButton" destination="eqe-3n-zUV" id="f4B-lN-hsl"/>
-                        <outlet property="imageView" destination="eAb-8Q-K5h" id="8Mw-OE-YNC"/>
-                        <outlet property="nameLabel" destination="n3F-ZO-m0R" id="civ-zM-dpe"/>
-                        <outlet property="priceLabel" destination="4Dq-O8-lbh" id="WkK-lR-Bws"/>
+                        <outlet property="addToCartButton" destination="eqe-3n-zUV" id="bkw-HH-wRc"/>
+                        <outlet property="imageView" destination="eAb-8Q-K5h" id="w7B-GQ-wXy"/>
+                        <outlet property="nameLabel" destination="n3F-ZO-m0R" id="XOz-kS-2Qq"/>
+                        <outlet property="priceLabel" destination="4Dq-O8-lbh" id="zF8-8H-7Rk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtL-5y-CHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
