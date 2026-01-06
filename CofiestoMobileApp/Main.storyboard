@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,6 +47,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Button">
                                     <color key="baseBackgroundColor" red="0.158003323" green="0.31269974810000001" blue="0.16114469889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="X2h-uf-OqG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -65,6 +68,11 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fye-Mu-G5h" secondAttribute="trailing" constant="24" id="yEC-X5-X7G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="40f-fe-A12" id="Lhd-vU-yH0"/>
+                        <outlet property="loginButton" destination="fye-Mu-G5h" id="Ih7-ZP-x6w"/>
+                        <outlet property="passwordTextField" destination="eOv-9Y-BXV" id="mUd-5D-Qi6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
