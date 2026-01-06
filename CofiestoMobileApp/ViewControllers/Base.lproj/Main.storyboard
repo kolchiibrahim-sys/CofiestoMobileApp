@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="Hmd-e2-muf">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="oI6-32-o20" customClass="LoginViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oI6-32-o20" customClass="LoginViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yNe-Oo-kzP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="loginButtonTapped:" destination="oI6-32-o20" eventType="touchUpInside" id="z8v-oL-Jlg"/>
+                                    <action selector="loginButtonTapped:" destination="oI6-32-o20" eventType="touchUpInside" id="kFg-Uo-id5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V12-lW-bLs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1303" y="-95"/>
+            <point key="canvasLocation" x="-1477" y="-95"/>
         </scene>
         <!--Coffee Detail View Controller-->
         <scene sceneID="7Vh-l3-IK4">
@@ -132,7 +132,7 @@
                                     <constraint firstAttribute="height" constant="250" id="icI-Xf-Ngx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3F-ZO-m0R">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3F-ZO-m0R">
                                 <rect key="frame" x="175" y="374" width="111" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,8 +149,8 @@
                                     <action selector="addToCartTapped:" destination="kwX-5x-kDt" eventType="touchUpInside" id="CqT-Ey-vR6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="priceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dq-O8-lbh">
-                                <rect key="frame" x="24" y="416" width="84" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dq-O8-lbh">
+                                <rect key="frame" x="24" y="409" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.1803921568627451" green="0.36078431372549019" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -160,14 +160,17 @@
                         <color key="backgroundColor" red="0.96078431372549022" green="0.94901960784313721" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="y8j-zw-SBW" firstAttribute="trailing" secondItem="eqe-3n-zUV" secondAttribute="trailing" constant="24" id="DM6-gE-ebw"/>
+                            <constraint firstItem="n3F-ZO-m0R" firstAttribute="top" secondItem="eAb-8Q-K5h" secondAttribute="bottom" constant="6" id="NXt-6x-0Nn"/>
+                            <constraint firstItem="y8j-zw-SBW" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Dq-O8-lbh" secondAttribute="trailing" symbolic="YES" id="QhW-XL-Ath"/>
                             <constraint firstItem="eAb-8Q-K5h" firstAttribute="leading" secondItem="y8j-zw-SBW" secondAttribute="leading" id="Rfd-wY-eVo"/>
-                            <constraint firstItem="4Dq-O8-lbh" firstAttribute="bottom" secondItem="n3F-ZO-m0R" secondAttribute="bottom" id="WOC-82-K3W"/>
+                            <constraint firstItem="4Dq-O8-lbh" firstAttribute="top" secondItem="eAb-8Q-K5h" secondAttribute="bottom" constant="41" id="Ru5-xG-pgR"/>
                             <constraint firstItem="eAb-8Q-K5h" firstAttribute="top" secondItem="y8j-zw-SBW" secondAttribute="top" id="XW2-rw-OEU"/>
+                            <constraint firstItem="y8j-zw-SBW" firstAttribute="trailing" secondItem="n3F-ZO-m0R" secondAttribute="trailing" constant="107" id="ZPB-Ze-WyT"/>
                             <constraint firstItem="y8j-zw-SBW" firstAttribute="trailing" secondItem="eAb-8Q-K5h" secondAttribute="trailing" id="ay7-7U-XRZ"/>
                             <constraint firstItem="eqe-3n-zUV" firstAttribute="leading" secondItem="y8j-zw-SBW" secondAttribute="leading" constant="24" id="m5l-QW-rmu"/>
                             <constraint firstItem="4Dq-O8-lbh" firstAttribute="leading" secondItem="y8j-zw-SBW" secondAttribute="leading" constant="24" id="meU-iu-omF"/>
                             <constraint firstItem="y8j-zw-SBW" firstAttribute="bottom" secondItem="eqe-3n-zUV" secondAttribute="bottom" constant="24" id="sZM-hL-T67"/>
-                            <constraint firstItem="4Dq-O8-lbh" firstAttribute="top" secondItem="n3F-ZO-m0R" secondAttribute="bottom" constant="8" id="uPf-W8-ldQ"/>
+                            <constraint firstItem="n3F-ZO-m0R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y8j-zw-SBW" secondAttribute="leading" id="xIJ-QM-B1j"/>
                         </constraints>
                     </view>
                     <connections>
@@ -179,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtL-5y-CHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-419" y="-95"/>
+            <point key="canvasLocation" x="-779" y="-95"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="IR4-B5-XWM">
@@ -219,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="db9-Gi-LRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="-95"/>
+            <point key="canvasLocation" x="10" y="-95"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CSi-3S-7qu">
