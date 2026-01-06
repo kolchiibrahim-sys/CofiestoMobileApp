@@ -9,28 +9,37 @@ import UIKit
 
 class CoffeeDetailViewController: UIViewController {
 
+    var item: CoffeeItem!
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
 
-    var item: CoffeeItem!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = item.name
         configureUI()
     }
 
     private func configureUI() {
-        imageView.image = UIImage(named: item.imageName)
         nameLabel.text = item.name
-        priceLabel.text = item.price.description
-        addToCartButton.layer.cornerRadius = 12
+        priceLabel.text = "$\(String(format: "%.2f", item.price))"
+        imageView.image = UIImage(named: item.imageName)
+
+        addToCartButton.layer.cornerRadius = 14
     }
 
+    
     @IBAction func addToCartTapped(_ sender: UIButton) {
+
+        //  Add to cart
         CartManager.shared.add(coffee: item)
+
+    
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+
+       
         navigationController?.popViewController(animated: true)
     }
 }
