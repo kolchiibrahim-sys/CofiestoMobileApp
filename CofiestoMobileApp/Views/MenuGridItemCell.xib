@@ -50,6 +50,7 @@
             </constraints>
             <connections>
                 <outlet property="coffeeImageView" destination="bD6-7h-ZAs" id="sGX-6j-anp"/>
+                <outlet property="containerView" destination="bD6-7h-ZAs" id="kbf-PH-aYE"/>
                 <outlet property="imageView" destination="bD6-7h-ZAs" id="2Yv-G7-wGO"/>
                 <outlet property="nameLabel" destination="bON-Lz-3kD" id="xsO-hZ-OAf"/>
                 <outlet property="priceLabel" destination="La9-In-nPH" id="icV-rV-qiq"/>
