@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -16,9 +14,18 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        let menuVC = storyboard?.instantiateViewController(
+
+        guard let storyboard = self.storyboard else {
+            print("Storyboard is nil")
+            return
+        }
+
+        guard let menuVC = storyboard.instantiateViewController(
             withIdentifier: "MenuViewController"
-        ) as! MenuViewController
+        ) as? MenuViewController else {
+            print("MenuViewController ID tapılmadı")
+            return
+        }
 
         let nav = UINavigationController(rootViewController: menuVC)
         nav.modalPresentationStyle = .fullScreen

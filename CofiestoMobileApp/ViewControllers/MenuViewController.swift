@@ -28,6 +28,11 @@ class MenuViewController: UIViewController {
 
         // 🛒 Cart button setup
         setupCartButton()
+        func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            updateCartBadge()
+        }
+
     }
 
     // 🔄 Badge refresh
@@ -149,8 +154,4 @@ extension MenuViewController: UICollectionViewDelegate,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 16
     }
-}
-override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    updateCartBadge()
 }

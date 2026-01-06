@@ -48,7 +48,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="loginButtonTapped:" destination="oI6-32-o20" eventType="touchUpInside" id="duM-Pj-we6"/>
+                                    <action selector="loginButtonTapped:" destination="oI6-32-o20" eventType="touchUpInside" id="z8v-oL-Jlg"/>
                                 </connections>
                             </button>
                         </subviews>
