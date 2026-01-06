@@ -16,16 +16,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7S-tw-Lz8">
-                                <rect key="frame" x="194" y="396" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cofiesto ☕️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isz-91-r5s">
+                                <rect key="frame" x="111.66666666666669" y="238" width="170" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.31269974810000001" blue="0.02134164291" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="40f-fe-A12">
+                                <rect key="frame" x="24" y="317" width="345" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="65S-sU-FtH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOv-9Y-BXV">
+                                <rect key="frame" x="24" y="381" width="345" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="gYy-ZY-q1e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fye-Mu-G5h">
+                                <rect key="frame" x="24" y="459" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YF9-pf-DwX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button">
+                                    <color key="baseBackgroundColor" red="0.158003323" green="0.31269974810000001" blue="0.16114469889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eOv-9Y-BXV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="1wp-9D-bdv"/>
+                            <constraint firstItem="40f-fe-A12" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="5uk-sG-861"/>
+                            <constraint firstItem="eOv-9Y-BXV" firstAttribute="top" secondItem="40f-fe-A12" secondAttribute="bottom" constant="16" id="8Ut-S0-VVT"/>
+                            <constraint firstItem="40f-fe-A12" firstAttribute="top" secondItem="isz-91-r5s" secondAttribute="bottom" constant="40" id="AE3-UH-shu"/>
+                            <constraint firstItem="isz-91-r5s" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="CTx-SI-NBh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="40f-fe-A12" secondAttribute="trailing" constant="24" id="aSH-3Z-TSA"/>
+                            <constraint firstItem="fye-Mu-G5h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="bL2-Lt-Dkp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eOv-9Y-BXV" secondAttribute="trailing" constant="24" id="jqB-uE-KC7"/>
+                            <constraint firstItem="isz-91-r5s" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="120" id="xTn-nL-cpN"/>
+                            <constraint firstItem="fye-Mu-G5h" firstAttribute="top" secondItem="eOv-9Y-BXV" secondAttribute="bottom" constant="30" id="xVd-De-6s9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fye-Mu-G5h" secondAttribute="trailing" constant="24" id="yEC-X5-X7G"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
