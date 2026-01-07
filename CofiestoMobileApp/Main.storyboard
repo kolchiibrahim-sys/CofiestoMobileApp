@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,6 +44,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="YF9-pf-DwX"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Button">
                                     <color key="baseBackgroundColor" red="0.158003323" green="0.31269974810000001" blue="0.16114469889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -155,14 +157,58 @@
                     <view key="view" contentMode="scaleToFill" id="VSE-2Q-hmw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sZC-FO-Srp">
+                                <rect key="frame" x="0.0" y="172" width="393" height="563"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OpC-qd-3on">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7B6-2a-ir6" customClass="MenuCollectionViewCell" customModule="CofiestoMobileApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CbB-Cb-MMS">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="39b-7U-Lnw">
+                                <rect key="frame" x="8" y="90" width="377" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="t3d-3s-oO8"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0I8-kq-1ak" id="cDS-79-U8R"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="IkD-Ch-uD3"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="IkD-Ch-uD3" firstAttribute="top" secondItem="39b-7U-Lnw" secondAttribute="top" constant="82" id="0vk-Py-usa"/>
+                            <constraint firstAttribute="trailing" secondItem="39b-7U-Lnw" secondAttribute="trailing" constant="8" id="1XP-s7-Xe7"/>
+                            <constraint firstItem="IkD-Ch-uD3" firstAttribute="bottom" secondItem="sZC-FO-Srp" secondAttribute="bottom" id="Jes-sL-Gbz"/>
+                            <constraint firstItem="sZC-FO-Srp" firstAttribute="top" secondItem="IkD-Ch-uD3" secondAttribute="top" id="Sfd-z5-T4e"/>
+                            <constraint firstItem="sZC-FO-Srp" firstAttribute="leading" secondItem="IkD-Ch-uD3" secondAttribute="leading" id="URG-Mg-iEu"/>
+                            <constraint firstItem="sZC-FO-Srp" firstAttribute="trailing" secondItem="IkD-Ch-uD3" secondAttribute="trailing" id="XIN-jb-Cl2"/>
+                            <constraint firstItem="39b-7U-Lnw" firstAttribute="leading" secondItem="VSE-2Q-hmw" secondAttribute="leading" constant="8" id="kOe-Tq-Z9F"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BYG-eu-Kdp"/>
+                    <connections>
+                        <outlet property="collectionView" destination="sZC-FO-Srp" id="wBs-co-KMX"/>
+                        <outlet property="searchBar" destination="39b-7U-Lnw" id="G3d-pQ-0xx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeD-6o-WuR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3154.9618320610684" y="319.71830985915494"/>
+            <point key="canvasLocation" x="3156" y="304"/>
         </scene>
         <!--Loyalty View Controller-->
         <scene sceneID="oVI-ba-Gkf">
@@ -178,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3G-0V-TAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4004" y="320"/>
+            <point key="canvasLocation" x="4004" y="304"/>
         </scene>
         <!--Item-->
         <scene sceneID="mH9-t6-ZLT">
@@ -279,9 +325,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
