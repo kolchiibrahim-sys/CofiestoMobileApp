@@ -11,6 +11,8 @@ class MenuCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var drinkImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    
+    static let identifer = "MenuCollectionViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()

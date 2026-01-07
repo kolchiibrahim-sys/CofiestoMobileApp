@@ -12,7 +12,7 @@ final class MenuLoader {
     static func loadMenu() -> MenuResponse? {
 
         guard let url = Bundle.main.url(forResource: "menu", withExtension: "json") else {
-            print("❌ menu.json tapılmadı")
+            print("❌")
             return nil
         }
 
