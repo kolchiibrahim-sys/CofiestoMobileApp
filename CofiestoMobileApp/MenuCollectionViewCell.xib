@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FfC-WN-Ryl" customClass="Menu">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cortado" translatesAutoresizingMaskIntoConstraints="NO" id="FfC-WN-Ryl" customClass="Menu">
                         <rect key="frame" x="8" y="8" width="154" height="100"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="sfd-vU-9VZ"/>
@@ -53,4 +53,7 @@
             <point key="canvasLocation" x="128" y="120"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Cortado" width="667" height="1000"/>
+    </resources>
 </document>
