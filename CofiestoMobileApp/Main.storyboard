@@ -78,55 +78,20 @@
             </objects>
             <point key="canvasLocation" x="3158.0152671755723" y="-340.14084507042253"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="ma1-eF-3To">
-            <objects>
-                <viewController id="zPV-tm-ozK" customClass="MainTabBarController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="abV-JE-Dvf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="JQU-d8-hDv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="GA8-4S-GYc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VwZ-wD-gdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2364.1221374045799" y="-340.14084507042253"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="rJp-kT-mbs">
-            <objects>
-                <viewController id="Nh1-Jm-iJr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qn8-Sw-un1">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="qvo-ea-bkb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="1EL-YD-ISi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EZp-LJ-c4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1509.1603053435115" y="-340.14084507042253"/>
-        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="oHH-2H-Ght">
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBarController" id="lQz-Xs-Vpk" customClass="MainTabBarController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SLd-Qf-6lp"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8GV-ic-pwC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="Nh1-Jm-iJr" kind="relationship" relationship="viewControllers" id="eoJ-Yq-iqJ"/>
-                        <segue destination="zPV-tm-ozK" kind="relationship" relationship="viewControllers" id="RGx-9d-c1J"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jww-Io-1Lx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="-340"/>
+            <point key="canvasLocation" x="-265" y="1089"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="uf7-yP-D27">
@@ -219,7 +184,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="M0Y-48-Zcl" kind="relationship" relationship="rootViewController" id="nHq-on-pfr"/>
+                        <segue destination="lQz-Xs-Vpk" kind="relationship" relationship="rootViewController" id="Lik-eP-VVT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQ7-fh-sx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,7 +202,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="sr4-qs-Ssa" kind="relationship" relationship="rootViewController" id="7UK-vP-FI1"/>
+                        <segue destination="lQz-Xs-Vpk" kind="relationship" relationship="rootViewController" id="sQw-ZT-Wxa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNo-ed-RZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,7 +220,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="9ny-02-t88" kind="relationship" relationship="rootViewController" id="v2h-J1-GY8"/>
+                        <segue destination="lQz-Xs-Vpk" kind="relationship" relationship="rootViewController" id="JmW-By-wYt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8l-BL-PKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -273,7 +238,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0I8-kq-1ak" kind="relationship" relationship="rootViewController" id="Kko-un-TEq"/>
+                        <segue destination="lQz-Xs-Vpk" kind="relationship" relationship="rootViewController" id="Mu0-yN-Dgf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPC-fZ-R6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -291,7 +256,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="SpJ-UE-6Qb" kind="relationship" relationship="rootViewController" id="FYN-T6-NRy"/>
+                        <segue destination="lQz-Xs-Vpk" kind="relationship" relationship="rootViewController" id="hfT-fN-Xly"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLR-gv-ZfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -299,6 +264,9 @@
             <point key="canvasLocation" x="4005" y="1089"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hfT-fN-Xly"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
