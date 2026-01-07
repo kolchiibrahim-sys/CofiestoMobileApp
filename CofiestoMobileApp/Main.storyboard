@@ -193,6 +193,7 @@
                     <navigationItem key="navigationItem" id="BYG-eu-Kdp"/>
                     <connections>
                         <outlet property="collectionView" destination="eje-nI-I6p" id="Mip-wB-PxH"/>
+                        <outlet property="searchBar" destination="VHl-0F-qy7" id="avR-nd-vS5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeD-6o-WuR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

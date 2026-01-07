@@ -8,6 +8,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
 
     private var categories: [MenuCategory] = []
@@ -48,7 +49,7 @@ class MenuViewController: UIViewController {
 extension MenuViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return filteredItems.count
     }
 
     func collectionView(
@@ -90,5 +91,34 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
 
         let width = (collectionView.frame.width - 24) / 2
         return CGSize(width: width, height: 180)
+    }
+}
+private var allItems: [MenuItem] = []
+private var filteredItems: [MenuItem] = []
+extension MenuViewController: UISearchBarDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+
+        if searchText.isEmpty {
+            filteredItems = allItems
+        } else {
+            filteredItems = allItems.filter {
+                $0.name.lowercased().contains(searchText.lowercased())
+            }
+        }
+
+        collectionView.reloadData()
+    }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        filteredItems = allItems
+        searchBar.showsCancelButton = false
+        collectionView.reloadData()
     }
 }
