@@ -167,13 +167,26 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VHl-0F-qy7">
+                                <rect key="frame" x="0.0" y="82" width="393" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="e3a-dx-fRK"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0I8-kq-1ak" id="mHk-Hq-Quz"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IkD-Ch-uD3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eje-nI-I6p" firstAttribute="leading" secondItem="IkD-Ch-uD3" secondAttribute="leading" id="AFP-qH-USk"/>
                             <constraint firstItem="IkD-Ch-uD3" firstAttribute="bottom" secondItem="eje-nI-I6p" secondAttribute="bottom" id="FAE-0G-TnY"/>
+                            <constraint firstItem="IkD-Ch-uD3" firstAttribute="top" secondItem="VHl-0F-qy7" secondAttribute="top" constant="90" id="FsI-aY-F7m"/>
                             <constraint firstItem="IkD-Ch-uD3" firstAttribute="trailing" secondItem="eje-nI-I6p" secondAttribute="trailing" id="I3V-M9-NTl"/>
+                            <constraint firstAttribute="trailing" secondItem="VHl-0F-qy7" secondAttribute="trailing" id="SqC-Iy-RgU"/>
+                            <constraint firstItem="VHl-0F-qy7" firstAttribute="leading" secondItem="VSE-2Q-hmw" secondAttribute="leading" id="dci-op-sqx"/>
                             <constraint firstItem="eje-nI-I6p" firstAttribute="top" secondItem="IkD-Ch-uD3" secondAttribute="top" id="t6T-YH-ksq"/>
                         </constraints>
                     </view>
