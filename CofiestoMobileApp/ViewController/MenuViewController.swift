@@ -5,19 +5,21 @@
 //  Created by Kolchı Ibrahım on 07.01.26.
 //
 import UIKit
+import UIKit
 
 class MenuViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
 
-    private var categories: [MenuCategory] = []
-    private var items: [MenuItem] = []
+    private var allItems: [MenuItem] = []
+    private var filteredItems: [MenuItem] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Menu"
         configureCollectionView()
+        searchBar.delegate = self
         loadMenu()
     }
 
@@ -36,19 +38,25 @@ class MenuViewController: UIViewController {
     }
 
     private func loadMenu() {
-        guard let response = MenuLoader.loadMenu() else { return }
+        guard let response = MenuLoader.loadMenu() else {
+            print("❌ response nil")
+            return
+        }
 
-        categories = response.categories
+        // 🔥 ƏN VACİB SƏTİR
+        allItems = response.categories.flatMap { $0.items }
+        filteredItems = allItems
 
-        
-        items = categories.flatMap { $0.items }
-
+        print("✅ Items loaded:", allItems.count)
         collectionView.reloadData()
     }
 }
 extension MenuViewController: UICollectionViewDataSource {
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
         return filteredItems.count
     }
 
@@ -62,10 +70,9 @@ extension MenuViewController: UICollectionViewDataSource {
             for: indexPath
         ) as! MenuCollectionViewCell
 
-        let item = items[indexPath.item]
+        let item = filteredItems[indexPath.item]
         cell.nameLabel.text = item.name
 
-        // Qiymət loji̇kası
         if let price = item.price {
             cell.priceLabel.text = String(format: "%.2f AZN", price)
         } else if let sizes = item.sizes {
@@ -93,11 +100,12 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width, height: 180)
     }
 }
-private var allItems: [MenuItem] = []
-private var filteredItems: [MenuItem] = []
 extension MenuViewController: UISearchBarDelegate {
 
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(
+        _ searchBar: UISearchBar,
+        textDidChange searchText: String
+    ) {
 
         if searchText.isEmpty {
             filteredItems = allItems
@@ -107,18 +115,6 @@ extension MenuViewController: UISearchBarDelegate {
             }
         }
 
-        collectionView.reloadData()
-    }
-
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = true
-    }
-
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-        searchBar.resignFirstResponder()
-        filteredItems = allItems
-        searchBar.showsCancelButton = false
         collectionView.reloadData()
     }
 }
