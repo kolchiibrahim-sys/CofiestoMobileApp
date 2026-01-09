@@ -229,7 +229,7 @@
                         <outlet property="nameLabel" destination="gfW-Ww-Dac" id="VXL-a8-d23"/>
                         <outlet property="plusButton" destination="wMl-Sv-Xle" id="01o-X0-iCd"/>
                         <outlet property="priceLabel" destination="dft-0R-RSr" id="7fc-og-nsJ"/>
-                        <outlet property="productImageView" destination="NaM-BS-sHN" id="G1o-Fw-eEh"/>
+                        <outlet property="productImageView" destination="NaM-BS-sHN" id="xSl-oH-ktO"/>
                         <outlet property="quantityLabel" destination="kUz-gq-NCh" id="YRT-Q6-Wbw"/>
                     </connections>
                 </viewController>

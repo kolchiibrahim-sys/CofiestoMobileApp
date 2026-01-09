@@ -4,20 +4,19 @@
 //
 //  Created by Kolchı Ibrahım on 07.01.26.
 //
+
 import UIKit
 
 class MenuCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var drinkImageView: UIImageView!
+    @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    
-    static let identifer = "MenuCollectionViewCell"
+    @IBOutlet weak var ingredientsLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 12
-        layer.masksToBounds = true
-        backgroundColor = .systemGray6
+        backgroundColor = UIColor(white: 0.97, alpha: 1)
     }
 }

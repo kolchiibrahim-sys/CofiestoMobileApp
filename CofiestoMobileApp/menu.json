@@ -1,106 +1,292 @@
-{
-  "currency": "AZN",
-  "categories": [
-
+[
+  {
+    "name": "AeroPress",
+    "category": "Coffee",
+    "ingredients": ["Espresso-style extraction", "Hot water"],
+    "image": "AeroPress.png",
+    "price": 6
+  },
+  {
+    "name": "Affogato",
+    "category": "Coffee Dessert",
+    "ingredients": ["Vanilla ice cream", "Double espresso"],
+    "image": "Affagato.png",
+    "price": 8
+  },
+  {
+    "name": "Americano",
+    "category": "Coffee",
+    "ingredients": ["Double espresso", "Water"],
+    "image": "Americano.png",
+    "price": 5
+  },
+  {
+    "name": "Banana Milkshake",
+    "category": "Milkshake",
+    "ingredients": ["Banana", "Milk", "Ice cream"],
+    "image": "BananaMilkShake.png",
+    "price": 10
+  },
+  {
+    "name": "Berry Milk",
+    "category": "Milkshake",
+    "ingredients": ["Milk", "Berries", "Berry purée", "Ice"],
+    "image": "BerryMilk.png",
+    "price": 10
+  },
+  {
+    "name": "Bumble Bee",
+    "category": "Coffee",
+    "ingredients": ["Double espresso", "Honey syrup", "Lemon", "Orange juice"],
+    "image": "BumbleBee.png",
+    "price": 7
+  },
+  {
+    "name": "Cacao",
+    "category": "Coffee",
+    "ingredients": ["Cocoa", "Milk", "Sugar"],
+    "image": "Cacao.png",
+    "price": 6
+  },
+  {
+    "name": "Chemex",
+    "category": "Coffee",
+    "ingredients": ["Filtered coffee", "Hot water"],
+    "image": "Chemex.png",
+    "price": 7
+  },
+  {
+    "name": "Chat Tea",
+    "category": "Tea",
+    "ingredients": ["Black tea", "Milk", "Spices"],
+    "image": "ChatTea.png",
+    "price": 6
+  },
+  {
+    "name": "Flat White",
+    "category": "Coffee",
+    "ingredients": ["Double espresso", "Steamed milk"],
+    "image": "FlatWhite.png",
+    "price": 7
+  }
+  ,
     {
-      "id": "limited_drinks",
-      "title": "Limited Drinks",
-      "items": [
-        { "id": "berry_milk", "name": "Berry Milk", "price": 9.90 },
-        { "id": "kiwi_pleasure", "name": "Kiwi Pleasure", "price": 10.50 },
-        { "id": "melon_strawberry", "name": "Melon Strawberry", "price": 10.90 },
-        { "id": "cucumber_lime", "name": "Cucumber Lime", "price": 9.90 },
-        { "id": "citrus_sunrise", "name": "Citrus Sunrise", "price": 9.90 },
-        { "id": "Grapefruit_Hibiscus_Tea", "name": "Grapefruit Hibiscus Tea", "price": 10.90 },
-        { "id": "yuzu_iced_tea", "name": "Yuzu Iced Tea", "price": 10.90 },
-        { "id": "iced_matcha", "name": "Iced Matcha", "price": 11.90 },
-        { "id": "iced_americano", "name": "Iced Americano", "price": 8.90 }
-      ]
+      "name": "Spanish Latte",
+      "category": "Coffee",
+      "ingredients": ["Double espresso", "Milk", "Condensed milk"],
+      "image": "SpanishLatte.png",
+      "price": 7
     },
-
     {
-      "id": "hot_coffee",
-      "title": "Hot Coffee",
-      "items": [
-        { "id": "Espresso", "name": "Espresso", "price": 5.50 },
-        { "id": "double_espresso", "name": "Double Espresso", "price": 6.50 },
-        { "id": "lungo", "name": "Lungo", "price": 6.10 },
-        { "id": "flat_white", "name": "Flat White", "price": 6.90 },
-        { "id": "Cortado", "name": "Cortado", "price": 5.90 },
-        {
-          "id": "americano",
-          "name": "Americano",
-          "sizes": { "S": 5.20, "M": 5.90, "L": 6.40 }
-        },
-        {
-          "id": "latte",
-          "name": "Latte",
-          "sizes": { "S": 6.10, "M": 6.90, "L": 7.90 }
-        },
-        {
-          "id": "Cappuccino",
-          "name": "Cappuccino",
-          "sizes": { "S": 6.10, "M": 6.90, "L": 7.70 }
-        },
-        { "id": "turkish_coffee", "name": "Turkish Coffee", "price": 6.50 }
-      ]
+      "name": "Peanut Latte",
+      "category": "Coffee",
+      "ingredients": ["Single espresso", "Milk", "Peanut cream"],
+      "image": "PeaNutLatte.png",
+      "price": 8
     },
-
     {
-      "id": "hot_special",
-      "title": "Hot Specials",
-      "items": [
-        { "id": "matcha_latte", "name": "Matcha Latte", "price": 9.90 },
-        { "id": "spanish_latte", "name": "Spanish Latte", "price": 9.90 },
-        { "id": "peanut_latte", "name": "Peanut Latte", "price": 10.50 },
-        { "id": "tiramisu_raf", "name": "Tiramisu Raf", "price": 12.90 },
-        { "id": "raf_lavender", "name": "Raf Lavender", "price": 10.90 },
-        { "id": "raf_macadamia", "name": "Raf Macadamia", "price": 10.90 },
-        { "id": "affagato", "name": "Affagato", "price": 10.90 }
-      ]
+      "name": "Lotus Latte",
+      "category": "Coffee",
+      "ingredients": ["Single espresso", "Milk", "Lotus cream"],
+      "image": "LotusLatte.png",
+      "price": 8
     },
-
     {
-      "id": "desserts",
-      "title": "Desserts",
-      "items": [
-        { "id": "vanilla_berliner", "name": "Vanilla Berliner", "price": 10.50 },
-        { "id": "chocolate_berliner", "name": "Chocolate Berliner", "price": 10.90 },
-        { "id": "raspberry_berliner", "name": "Raspberry Berliner", "price": 10.90 },
-        { "id": "san_sebastian", "name": "San Sebastian", "price": 13.90 },
-        { "id": "honey_cake", "name": "Honey Cake", "price": 12.90 },
-        { "id": "honey_cake_chocolate", "name": "Honey Cake Chocolate", "price": 13.90 },
-        { "id": "almond_crepe_diet", "name": "Almond Crepe Diet", "price": 11.40 },
-        { "id": "blueberry_crepe_diet", "name": "Blueberry Crepe Diet", "price": 11.90 },
-        { "id": "american_cookie", "name": "American Cookie", "price": 9.90 },
-        { "id": "cacao_cookies", "name": "Cacao Cookies", "price": 9.90 }
-      ]
+      "name": "Tiramisu Raf",
+      "category": "Raf",
+      "ingredients": ["Double espresso", "Cream", "Tiramisu cream", "Milk"],
+      "image": "TiramisuRaf.png",
+      "price": 9
     },
-
     {
-      "id": "alternative_coffee",
-      "title": "Alternative Coffee",
-      "items": [
-        { "id": "chemex", "name": "Chemex", "price": 16.90 },
-        { "id": "v60_hario", "name": "V60 Hario", "price": 15.90 },
-        { "id": "brazil_tres_rios", "name": "Brazil Tres Rios", "price": 39.90 },
-        { "id": "colombia_carbonic", "name": "Colombia Carbonic", "price": 65.00 },
-        { "id": "ethiopia_yirgacheffe", "name": "Ethiopia Yirgacheffe", "price": 55.90 },
-        { "id": "sumatra_mandheling", "name": "Sumatra Mandheling", "price": 43.90 }
-      ]
+      "name": "Lavender Raf",
+      "category": "Raf",
+      "ingredients": ["Double espresso", "Milk", "Lavender syrup", "Cream"],
+      "image": "LavenderRaf.png",
+      "price": 9
     },
-
     {
-      "id": "extra_bar",
-      "title": "Extra Bar",
-      "items": [
-        { "id": "vanilla_milkshake", "name": "Vanilla Milkshake", "price": 10.90 },
-        { "id": "chocolate_milkshake", "name": "Chocolate Milkshake", "price": 10.90 },
-        { "id": "milk", "name": "Milk", "price": 1.00 },
-        { "id": "puree", "name": "Puree", "price": 3.00 },
-        { "id": "syrup", "name": "Syrup", "price": 2.00 },
-        { "id": "lemon_fresh", "name": "Lemon Fresh", "price": 1.00 }
-      ]
+      "name": "Macadamia Raf",
+      "category": "Raf",
+      "ingredients": ["Double espresso", "Milk", "Macadamia syrup", "Cream"],
+      "image": "MacadamiaRaf.png",
+      "price": 9
+    },
+    {
+      "name": "Coconut Raf",
+      "category": "Raf",
+      "ingredients": ["Double espresso", "Milk", "Coconut syrup", "Cream"],
+      "image": "CoconutRaf.png",
+      "price": 9
+    },
+    {
+      "name": "Honey Raf",
+      "category": "Raf",
+      "ingredients": ["Double espresso", "Milk", "Honey syrup", "Cream"],
+      "image": "HoneyRaf.png",
+      "price": 9
+    },
+    {
+      "name": "White Mocha",
+      "category": "Coffee",
+      "ingredients": ["Single espresso", "Milk", "White chocolate"],
+      "image": "WhiteMocha.png",
+      "price": 8
+    },
+    {
+      "name": "Irish Coffee",
+      "category": "Coffee",
+      "ingredients": ["Double espresso", "Cream", "Irish syrup"],
+      "image": "IrishCoffee.png",
+      "price": 8
     }
-  ]
-}
+    ,
+      {
+        "name": "Citrus Sunrise",
+        "category": "Coffee",
+        "ingredients": ["Single espresso", "Orange juice", "Lemon", "Sugar syrup"],
+        "image": "CitrusSunrise.png",
+        "price": 7
+      },
+      {
+        "name": "Espresso Tonic",
+        "category": "Coffee",
+        "ingredients": ["Double espresso", "Tonic water", "Ice"],
+        "image": "EspressoTonic.png",
+        "price": 7
+      },
+      {
+        "name": "Bubble Gum Coffee",
+        "category": "Coffee",
+        "ingredients": ["Single espresso", "Bubble gum syrup", "Milk", "Ice"],
+        "image": "BubbleGum.png",
+        "price": 8
+      },
+      {
+        "name": "Glisse",
+        "category": "Coffee Dessert",
+        "ingredients": ["Double espresso", "Ice cream"],
+        "image": "Glisse.png",
+        "price": 8
+      },
+      {
+        "name": "Ice Americano",
+        "category": "Coffee",
+        "ingredients": ["Double espresso", "Water", "Ice"],
+        "image": "IceAmericano.png",
+        "price": 5
+      },
+      {
+        "name": "Ice Latte",
+        "category": "Coffee",
+        "ingredients": ["Single espresso", "Milk", "Ice"],
+        "image": "IceLatte.png",
+        "price": 7
+      },
+      {
+        "name": "Ice Spanish Latte",
+        "category": "Coffee",
+        "ingredients": ["Double espresso", "Milk", "Condensed milk", "Ice"],
+        "image": "IceSpanishLatte.png",
+        "price": 8
+      },
+      {
+        "name": "Matcha Latte",
+        "category": "Matcha",
+        "ingredients": ["Matcha", "Milk", "Sugar syrup"],
+        "image": "MatchaLatte.png",
+        "price": 8
+      },
+      {
+        "name": "Ice Matcha Latte",
+        "category": "Matcha",
+        "ingredients": ["Matcha", "Milk", "Ice", "Sugar syrup"],
+        "image": "IceMatchaLatte.png",
+        "price": 8
+      }
+      ,
+        {
+          "name": "Mix Berry Lemonade",
+          "category": "Lemonade",
+          "ingredients": ["Berry purée", "Mint", "Pomegranate syrup", "Lemon", "Sparkling water"],
+          "image": "MixBerryLemonade.png",
+          "price": 8
+        },
+        {
+          "name": "Cucumber Lime",
+          "category": "Lemonade",
+          "ingredients": ["Cucumber", "Lime", "Lemon", "Mint", "Cucumber syrup", "Lime syrup", "Sparkling water"],
+          "image": "CucumberLime.png",
+          "price": 8
+        },
+        {
+          "name": "Watermelon Strawberry",
+          "category": "Lemonade",
+          "ingredients": ["Watermelon syrup", "Strawberry syrup", "Lemon", "Sparkling water", "Grapefruit", "Mint"],
+          "image": "WatermelonStrawberry.png",
+          "price": 8
+        },
+        {
+          "name": "Melon Lemonade",
+          "category": "Lemonade",
+          "ingredients": ["Lemon", "Melon syrup", "Orange", "Sparkling water"],
+          "image": "MelonLemonade.png",
+          "price": 8
+        },
+        {
+          "name": "Basil Lemon",
+          "category": "Lemonade",
+          "ingredients": ["Basil", "Lemon", "Basil syrup", "Sparkling water"],
+          "image": "BasilLemon.png",
+          "price": 8
+        },
+        {
+          "name": "Detox",
+          "category": "Detox",
+          "ingredients": ["Apple", "Cucumber", "Parsley", "Ginger", "Lemon", "Water", "Ice"],
+          "image": "Detox.png",
+          "price": 7
+        },
+        {
+          "name": "Fruit Tea",
+          "category": "Tea",
+          "ingredients": ["Berries", "Grapefruit", "Hibiscus", "Peach purée"],
+          "image": "FruitTea.png",
+          "price": 7
+        },
+        {
+          "name": "Orange Lemon Tea",
+          "category": "Tea",
+          "ingredients": ["Orange", "Mint", "Passion fruit purée", "Cinnamon", "Lemon"],
+          "image": "OrangeLemonTea.png",
+          "price": 7
+        },
+        {
+          "name": "San Sebastian Cheesecake",
+          "category": "Dessert",
+          "ingredients": ["Cream cheese", "Sugar", "Egg", "Flour", "Cream"],
+          "image": "SanSebastian.png",
+          "price": 9
+        },
+        {
+          "name": "Honey Cake",
+          "category": "Dessert",
+          "ingredients": ["Butter", "Caramel", "Condensed milk", "Vanilla cream", "Flour"],
+          "image": "HoneyCake.png",
+          "price": 10
+        },
+        {
+          "name": "Magnolia",
+          "category": "Dessert",
+          "ingredients": ["Milk cream", "Banana", "Biscuit crumbs", "Vanilla"],
+          "image": "Magnolia.png",
+          "price": 9
+        },
+        {
+          "name": "Pistachio Cake Diet",
+          "category": "Dessert",
+          "ingredients": ["Almond flour", "Stevia", "Pistachio", "Chocolate", "Raspberry purée"],
+          "image": "PistachioCakeDiet.png",
+          "price": 10
+        }
+      ]
