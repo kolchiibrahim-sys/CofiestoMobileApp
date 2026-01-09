@@ -2,16 +2,15 @@
 //  MenuViewController.swift
 //  CofiestoMobileApp
 //
-//  Created by Kolchı Ibrahım on 07.01.26.
+//  Created by Kolchı Ibrahım on 09.01.26.
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
 
-    private var allItems: [MenuItem] = []
-    private var filteredItems: [MenuItem] = []
-
+    private var filteredSections: [(title: String, items: [MenuItem])] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Menu"
@@ -19,53 +18,57 @@ class MenuViewController: UIViewController {
         configureCollectionView()
         loadMenu()
     }
-
-    // MARK: - CollectionView setup
+    
     private func configureCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-
+        
         let nib = UINib(nibName: "MenuCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "MenuCell")
+        collectionView.register(
+            UICollectionReusableView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: "HeaderView"
+        )
     }
-
-    // MARK: - Load JSON
+    
     private func loadMenu() {
         guard let response = MenuLoader.loadMenu() else {
-            print("❌ menu load failed")
+            print("Menu Load Failed")
             return
         }
-
-        allItems = response.categories.flatMap { $0.items }
-        filteredItems = allItems
-
-        print("✅ Items loaded:", filteredItems.count)
+        filteredSections = response.categories.map { category in
+            return (title: category.title, items: category.items)
+        }
+        
+        print("Sections loaded:", filteredSections.count)
         collectionView.reloadData()
     }
 }
-
-// MARK: - UICollectionViewDataSource
 extension MenuViewController: UICollectionViewDataSource {
-
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return filteredSections.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return filteredItems.count
+        return filteredSections[section].items.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
+        
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "MenuCell",
             for: indexPath
         ) as! MenuCollectionViewCell
-
-        let item = filteredItems[indexPath.item]
-
-        // 🔹 Name
+        
+        let item = filteredSections[indexPath.section].items[indexPath.row]
+        
         cell.nameLabel.text = item.name
-
-        // 🔹 Price
+        
+        // PRICE
         if let price = item.price {
             cell.priceLabel.text = String(format: "%.2f AZN", price)
         } else if let sizes = item.sizes {
@@ -76,28 +79,50 @@ extension MenuViewController: UICollectionViewDataSource {
         } else {
             cell.priceLabel.text = ""
         }
-
-        // 🔹 Image (JSON id → Assets image)
         if let id = item.id {
-            let imageName = id.toImageName()   // affogato_pistachio → AffogatoPistachio
-            cell.drinkImageView.image = UIImage(named: imageName)
-                ?? UIImage(named: "placeholder")
+            cell.drinkImageView.image = UIImage(named: id.toImageName()) ?? UIImage(named: "placeholder")
         } else {
             cell.drinkImageView.image = UIImage(named: "placeholder")
         }
-
+        
         return cell
     }
 }
+extension MenuViewController {
 
-// MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let header = collectionView.dequeueReusableSupplementaryView(
+            ofKind: kind,
+            withReuseIdentifier: "HeaderView",
+            for: indexPath
+        )
+        header.subviews.forEach { $0.removeFromSuperview() }
+        
+        let label = UILabel(frame: CGRect(x: 12, y: 0, width: collectionView.frame.width, height: 30))
+        label.text = filteredSections[indexPath.section].title
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.textColor = .black
+        
+        header.addSubview(label)
+        return header
+    }
+}
 extension MenuViewController: UICollectionViewDelegateFlowLayout {
-
+    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+        
         let width = (collectionView.frame.width - 24) / 2
-        return CGSize(width: width, height: 160)
+        return CGSize(width: width, height: 170)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 32)
     }
 }

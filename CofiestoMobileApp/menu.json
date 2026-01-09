@@ -33,7 +33,6 @@
         { "id": "flat_white", "name": "Flat White", "price": 6.10 },
         { "id": "cortado", "name": "Cortado", "price": 5.90 },
         { "id": "cacao", "name": "Cacao", "price": 7.20 },
-
         {
           "id": "americano",
           "name": "Americano",
@@ -108,6 +107,28 @@
         { "name": "Puree", "price": 3.00 },
         { "name": "Syrup", "price": 2.00 },
         { "name": "Whipped Cream", "price": 1.20 }
+      ]
+    },
+
+    {
+      "id": "desserts",
+      "title": "Desserts",
+      "items": [
+        { "id": "berliner_nutella", "name": "Berliner Nutella", "price": 10.90 },
+        { "id": "berliner_vanilla", "name": "Berliner Vanilla", "price": 10.50 },
+        { "id": "berliner_chocolate", "name": "Berliner Chocolate", "price": 11.20 },
+        { "id": "muffin_chocolate", "name": "Muffin Chocolate", "price": 10.40 },
+        { "id": "chocolate_crepe_diet", "name": "Chocolate Crepe Diet", "price": 11.80 },
+        { "id": "damla_cookies", "name": "Damla Cookies", "price": 10.30 },
+        { "id": "american_cookies", "name": "American Cookies", "price": 10.90 },
+        { "id": "cacao_cookies", "name": "Cacao Cookies", "price": 11.10 },
+        { "id": "san_sebastian", "name": "San Sebastian", "price": 12.00 },
+        { "id": "pistachio_crepe_diet", "name": "Pistachio Crepe Diet", "price": 11.70 },
+        { "id": "honey_cake", "name": "Honey Cake", "price": 10.90 },
+        { "id": "pistachio_cake_diet", "name": "Pistachio Cake Diet", "price": 11.90 },
+        { "id": "almond_crepe_diet", "name": "Almond Crepe Diet", "price": 10.60 },
+        { "id": "blueberry_crepe_diet", "name": "Blueberry Crepe Diet", "price": 11.40 },
+        { "id": "honey_cake_chocolate", "name": "Honey Cake Chocolate", "price": 11.10 }
       ]
     }
   ]

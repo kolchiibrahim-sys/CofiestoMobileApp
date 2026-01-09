@@ -19,10 +19,10 @@ final class MenuLoader {
         do {
             let data = try Data(contentsOf: url)
             let decoded = try JSONDecoder().decode(MenuResponse.self, from: data)
-            print("✅ JSON decoded")
+            print("JSON decoded")
             return decoded
         } catch {
-            print("❌ JSON decode error:", error)
+            print("JSON decode error:", error)
             return nil
         }
     }
