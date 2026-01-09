@@ -163,3 +163,10 @@ extension MenuViewController: UISearchResultsUpdating {
         collectionView.reloadData()
     }
 }
+func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let item = filteredItems[indexPath.item]
+
+    let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+    vc.item = item
+    navigationController?.pushViewController(vc, animated: true)
+}
