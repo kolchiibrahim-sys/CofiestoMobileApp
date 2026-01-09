@@ -1,25 +1,20 @@
 {
   "currency": "AZN",
   "categories": [
+
     {
       "id": "limited_drinks",
-      "title": "Limited Edition Drinks",
+      "title": "Limited Drinks",
       "items": [
-        { "id": "affogato_pistachio", "name": "Affogato Pistachio", "price": 12.50, "description": "Vanil dondurma, espresso və fıstıq notları" },
-        { "id": "berry_milk", "name": "Berry Milk", "price": 11.90, "description": "Süd və təzə giləmeyvə ilə sərin içki" },
-        { "id": "cherry_matcha", "name": "Cherry Matcha", "price": 12.50, "description": "Matcha və vişnə dadlarının balansı" },
-        { "id": "detox", "name": "Detox", "price": 9.50, "description": "Alma, xiyar, zəncəfil və limonla sağlam içki" },
-        { "id": "pistachio_espresso", "name": "Pistachio Espresso", "price": 12.50, "description": "Espresso və fıstıq kremi" },
-        { "id": "pistachio_latte", "name": "Pistachio Latte", "price": 10.90, "description": "Latte və fıstıq aroması" },
-        { "id": "cucumber_lime", "name": "Cucumber Lime", "price": 9.40, "description": "Xiyar və lime ilə təravətli limonat" },
-        { "id": "watermelon_strawberry", "name": "Watermelon Strawberry", "price": 9.40, "description": "Qarpız və çiyələkli meyvə içkisi" },
-        { "id": "matcha_lime", "name": "Matcha Lime", "price": 12.50, "description": "Matcha və lime ilə fərqli dad" },
-        { "id": "mix_berry_lemonade", "name": "Mix Berry Lemonade", "price": 9.50, "description": "Giləmeyvə və limonla klassik limonat" },
-        { "id": "orange_matcha", "name": "Orange Matcha", "price": 12.50, "description": "Portağal və matcha sintezi" },
-        { "id": "basil_lemon", "name": "Basil Lemon", "price": 9.50, "description": "Reyhan və limonla aromatik içki" },
-        { "id": "vanilla_almond", "name": "Vanilla Almond", "price": 12.50, "description": "Badam südü və vanil notları" },
-        { "id": "melon_orange", "name": "Melon Orange", "price": 9.40, "description": "Yemiş və portağal qarışığı" },
-        { "id": "smoothie", "name": "Smoothie", "price": 14.90, "description": "Mango, marakuya, moruq və tropik meyvələr" }
+        { "id": "berry_milk", "name": "Berry Milk", "price": 9.90 },
+        { "id": "kiwi_pleasure", "name": "Kiwi Pleasure", "price": 10.50 },
+        { "id": "melon_strawberry", "name": "Melon Strawberry", "price": 10.90 },
+        { "id": "cucumber_lime", "name": "Cucumber Lime", "price": 9.90 },
+        { "id": "citrus_sunrise", "name": "Citrus Sunrise", "price": 9.90 },
+        { "id": "Grapefruit_Hibiscus_Tea", "name": "Grapefruit Hibiscus Tea", "price": 10.90 },
+        { "id": "yuzu_iced_tea", "name": "Yuzu Iced Tea", "price": 10.90 },
+        { "id": "iced_matcha", "name": "Iced Matcha", "price": 11.90 },
+        { "id": "iced_americano", "name": "Iced Americano", "price": 8.90 }
       ]
     },
 
@@ -27,12 +22,11 @@
       "id": "hot_coffee",
       "title": "Hot Coffee",
       "items": [
-        { "id": "espresso", "name": "Espresso", "price": 3.50 },
-        { "id": "double_espresso", "name": "Double Espresso", "price": 4.10 },
-        { "id": "lungo", "name": "Lungo", "price": 5.10 },
-        { "id": "flat_white", "name": "Flat White", "price": 6.10 },
-        { "id": "cortado", "name": "Cortado", "price": 5.90 },
-        { "id": "cacao", "name": "Cacao", "price": 7.20 },
+        { "id": "Espresso", "name": "Espresso", "price": 5.50 },
+        { "id": "double_espresso", "name": "Double Espresso", "price": 6.50 },
+        { "id": "lungo", "name": "Lungo", "price": 6.10 },
+        { "id": "flat_white", "name": "Flat White", "price": 6.90 },
+        { "id": "Cortado", "name": "Cortado", "price": 5.90 },
         {
           "id": "americano",
           "name": "Americano",
@@ -44,25 +38,11 @@
           "sizes": { "S": 6.10, "M": 6.90, "L": 7.90 }
         },
         {
-          "id": "latte_macchiato",
-          "name": "Latte Macchiato",
-          "sizes": { "S": 5.90, "M": 6.90, "L": 7.70 }
-        },
-        {
-          "id": "cappuccino",
+          "id": "Cappuccino",
           "name": "Cappuccino",
           "sizes": { "S": 6.10, "M": 6.90, "L": 7.70 }
         },
-        {
-          "id": "chai_latte",
-          "name": "Chai Tea Latte",
-          "sizes": { "S": 6.50, "M": 7.30, "L": 8.30 }
-        },
-        {
-          "id": "raf",
-          "name": "Raf Coffee",
-          "sizes": { "S": 6.90, "M": 7.90, "L": 8.90 }
-        }
+        { "id": "turkish_coffee", "name": "Turkish Coffee", "price": 6.50 }
       ]
     },
 
@@ -70,43 +50,13 @@
       "id": "hot_special",
       "title": "Hot Specials",
       "items": [
-        { "id": "raf_lavender", "name": "Raf Lavender", "price": 8.20 },
-        { "id": "raf_coconut", "name": "Raf Coconut", "price": 8.20 },
-        { "id": "raf_macadamia", "name": "Raf Macadamia", "price": 8.20 },
-        { "id": "spanish_latte", "name": "Spanish Latte", "price": 8.20 },
-        { "id": "matcha_latte", "name": "Matcha Latte", "price": 7.30 }
-      ]
-    },
-
-    {
-      "id": "alternative_coffee",
-      "title": "Alternative Coffee Beans",
-      "items": [
-        { "id": "brazil_tres_rios", "name": "Brazil Tres Rios", "price": 39.00 },
-        { "id": "colombia_carbonic", "name": "Colombia Carbonic Maceration", "price": 65.00 },
-        { "id": "ethiopia_yirgacheffe", "name": "Ethiopia Yirgacheffe", "price": 55.00 },
-        { "id": "indonesia_flores", "name": "Indonesia Flores Anaerobic", "price": 65.00 },
-        { "id": "costa_rica_tarrazu", "name": "Costa Rica Tarrazu", "price": 55.90 },
-        { "id": "sumatra_mandheling", "name": "Indonesia Sumatra Mandheling", "price": 43.90 }
-      ]
-    },
-
-    {
-      "id": "extra_bar",
-      "title": "Extra Bar",
-      "items": [
-        { "name": "Almond Milk", "price": 3.00 },
-        { "name": "Oat Milk", "price": 3.00 },
-        { "name": "Ice Cream", "price": 3.00 },
-        { "name": "Extra Espresso", "price": 2.00 },
-        { "name": "Lactose Free Milk", "price": 2.00 },
-        { "name": "Lemon Fresh", "price": 1.00 },
-        { "name": "Marshmallow", "price": 2.50 },
-        { "name": "Milk", "price": 1.00 },
-        { "name": "Orange", "price": 2.00 },
-        { "name": "Puree", "price": 3.00 },
-        { "name": "Syrup", "price": 2.00 },
-        { "name": "Whipped Cream", "price": 1.20 }
+        { "id": "matcha_latte", "name": "Matcha Latte", "price": 9.90 },
+        { "id": "spanish_latte", "name": "Spanish Latte", "price": 9.90 },
+        { "id": "peanut_latte", "name": "Peanut Latte", "price": 10.50 },
+        { "id": "tiramisu_raf", "name": "Tiramisu Raf", "price": 12.90 },
+        { "id": "raf_lavender", "name": "Raf Lavender", "price": 10.90 },
+        { "id": "raf_macadamia", "name": "Raf Macadamia", "price": 10.90 },
+        { "id": "affagato", "name": "Affagato", "price": 10.90 }
       ]
     },
 
@@ -114,21 +64,42 @@
       "id": "desserts",
       "title": "Desserts",
       "items": [
-        { "id": "berliner_nutella", "name": "Berliner Nutella", "price": 10.90 },
-        { "id": "berliner_vanilla", "name": "Berliner Vanilla", "price": 10.50 },
-        { "id": "berliner_chocolate", "name": "Berliner Chocolate", "price": 11.20 },
-        { "id": "muffin_chocolate", "name": "Muffin Chocolate", "price": 10.40 },
-        { "id": "chocolate_crepe_diet", "name": "Chocolate Crepe Diet", "price": 11.80 },
-        { "id": "damla_cookies", "name": "Damla Cookies", "price": 10.30 },
-        { "id": "american_cookies", "name": "American Cookies", "price": 10.90 },
-        { "id": "cacao_cookies", "name": "Cacao Cookies", "price": 11.10 },
-        { "id": "san_sebastian", "name": "San Sebastian", "price": 12.00 },
-        { "id": "pistachio_crepe_diet", "name": "Pistachio Crepe Diet", "price": 11.70 },
-        { "id": "honey_cake", "name": "Honey Cake", "price": 10.90 },
-        { "id": "pistachio_cake_diet", "name": "Pistachio Cake Diet", "price": 11.90 },
-        { "id": "almond_crepe_diet", "name": "Almond Crepe Diet", "price": 10.60 },
-        { "id": "blueberry_crepe_diet", "name": "Blueberry Crepe Diet", "price": 11.40 },
-        { "id": "honey_cake_chocolate", "name": "Honey Cake Chocolate", "price": 11.10 }
+        { "id": "vanilla_berliner", "name": "Vanilla Berliner", "price": 10.50 },
+        { "id": "chocolate_berliner", "name": "Chocolate Berliner", "price": 10.90 },
+        { "id": "raspberry_berliner", "name": "Raspberry Berliner", "price": 10.90 },
+        { "id": "san_sebastian", "name": "San Sebastian", "price": 13.90 },
+        { "id": "honey_cake", "name": "Honey Cake", "price": 12.90 },
+        { "id": "honey_cake_chocolate", "name": "Honey Cake Chocolate", "price": 13.90 },
+        { "id": "almond_crepe_diet", "name": "Almond Crepe Diet", "price": 11.40 },
+        { "id": "blueberry_crepe_diet", "name": "Blueberry Crepe Diet", "price": 11.90 },
+        { "id": "american_cookie", "name": "American Cookie", "price": 9.90 },
+        { "id": "cacao_cookies", "name": "Cacao Cookies", "price": 9.90 }
+      ]
+    },
+
+    {
+      "id": "alternative_coffee",
+      "title": "Alternative Coffee",
+      "items": [
+        { "id": "chemex", "name": "Chemex", "price": 16.90 },
+        { "id": "v60_hario", "name": "V60 Hario", "price": 15.90 },
+        { "id": "brazil_tres_rios", "name": "Brazil Tres Rios", "price": 39.90 },
+        { "id": "colombia_carbonic", "name": "Colombia Carbonic", "price": 65.00 },
+        { "id": "ethiopia_yirgacheffe", "name": "Ethiopia Yirgacheffe", "price": 55.90 },
+        { "id": "sumatra_mandheling", "name": "Sumatra Mandheling", "price": 43.90 }
+      ]
+    },
+
+    {
+      "id": "extra_bar",
+      "title": "Extra Bar",
+      "items": [
+        { "id": "vanilla_milkshake", "name": "Vanilla Milkshake", "price": 10.90 },
+        { "id": "chocolate_milkshake", "name": "Chocolate Milkshake", "price": 10.90 },
+        { "id": "milk", "name": "Milk", "price": 1.00 },
+        { "id": "puree", "name": "Puree", "price": 3.00 },
+        { "id": "syrup", "name": "Syrup", "price": 2.00 },
+        { "id": "lemon_fresh", "name": "Lemon Fresh", "price": 1.00 }
       ]
     }
   ]

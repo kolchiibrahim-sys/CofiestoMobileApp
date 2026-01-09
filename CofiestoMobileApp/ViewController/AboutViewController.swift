@@ -11,6 +11,6 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Haqqımızda"
+        title = "About Us"
     }
 }

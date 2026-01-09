@@ -7,9 +7,9 @@
 import Foundation
 
 extension String {
-    func toImageName() -> String {
-        return self
-            .split(separator: "_")
+   func toImageName() -> String {
+       return self
+           .split(separator: "_")
             .map { $0.capitalized }
             .joined()
     }

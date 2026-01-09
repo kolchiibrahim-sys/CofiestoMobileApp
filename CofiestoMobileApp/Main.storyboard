@@ -133,6 +133,70 @@
             </objects>
             <point key="canvasLocation" x="1480.1526717557251" y="303.52112676056339"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="8Ku-at-sKU">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="5WV-a9-Zep" customClass="DetailViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zWo-8M-7jf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NaM-BS-sHN">
+                                <rect key="frame" x="0.0" y="188" width="393" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="e3V-cw-DPf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfW-Ww-Dac">
+                                <rect key="frame" x="16" y="454" width="361" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dft-0R-RSr">
+                                <rect key="frame" x="16" y="488.33333333333331" width="88" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="0.24705882352941178" green="0.68235294117647061" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pm-eJ-rmc">
+                                <rect key="frame" x="136" y="571" width="121" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="minusButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMl-Sv-Xle">
+                                <rect key="frame" x="159" y="642" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-ng-igS">
+                                <rect key="frame" x="117" y="536" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AVb-85-BYr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NaM-BS-sHN" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" id="FQb-ZC-qbI"/>
+                            <constraint firstItem="dft-0R-RSr" firstAttribute="top" secondItem="gfW-Ww-Dac" secondAttribute="bottom" constant="8" id="Tzy-JU-Fc2"/>
+                            <constraint firstItem="NaM-BS-sHN" firstAttribute="top" secondItem="AVb-85-BYr" secondAttribute="top" constant="70" id="fiz-lM-Kpg"/>
+                            <constraint firstItem="gfW-Ww-Dac" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" constant="16" id="gKz-dd-uw6"/>
+                            <constraint firstItem="AVb-85-BYr" firstAttribute="trailing" secondItem="gfW-Ww-Dac" secondAttribute="trailing" constant="16" id="oBD-2L-48P"/>
+                            <constraint firstItem="AVb-85-BYr" firstAttribute="trailing" secondItem="NaM-BS-sHN" secondAttribute="trailing" id="tOf-DJ-eir"/>
+                            <constraint firstItem="gfW-Ww-Dac" firstAttribute="top" secondItem="NaM-BS-sHN" secondAttribute="bottom" constant="16" id="vEJ-hl-KAg"/>
+                            <constraint firstItem="dft-0R-RSr" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" constant="16" id="vSI-tj-rds"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7t7-nZ-Krt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1114" y="304"/>
+        </scene>
         <!--Branches View Controller-->
         <scene sceneID="S5Q-Sg-TwW">
             <objects>

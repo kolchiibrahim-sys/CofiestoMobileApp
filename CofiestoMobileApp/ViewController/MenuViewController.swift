@@ -51,14 +51,14 @@ extension MenuViewController {
     
     private func loadMenu() {
         guard let response = MenuLoader.loadMenu() else {
-            print("❌ Menu Load Failed")
+            print("Menu Load Failed")
             return
         }
         
         allSections = response.categories.map { ($0.title, $0.items) }
         filteredSections = allSections
         
-        print("✅ Sections Loaded:", filteredSections.count)
+        print("Sections Loaded:", filteredSections.count)
         collectionView.reloadData()
     }
 }
