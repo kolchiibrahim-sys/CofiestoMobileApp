@@ -8,16 +8,22 @@ import UIKit
 class MenuViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-
+    
+    private var allSections: [(title: String, items: [MenuItem])] = []
     private var filteredSections: [(title: String, items: [MenuItem])] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Menu"
         view.backgroundColor = .white
+        
         configureCollectionView()
+        configureSearchController()
         loadMenu()
     }
+}
+
+extension MenuViewController {
     
     private func configureCollectionView() {
         collectionView.delegate = self
@@ -25,6 +31,7 @@ class MenuViewController: UIViewController {
         
         let nib = UINib(nibName: "MenuCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "MenuCell")
+        
         collectionView.register(
             UICollectionReusableView.self,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
@@ -32,19 +39,30 @@ class MenuViewController: UIViewController {
         )
     }
     
+    private func configureSearchController() {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Search drinks..."
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
+    }
+    
     private func loadMenu() {
         guard let response = MenuLoader.loadMenu() else {
-            print("Menu Load Failed")
+            print("❌ Menu Load Failed")
             return
         }
-        filteredSections = response.categories.map { category in
-            return (title: category.title, items: category.items)
-        }
         
-        print("Sections loaded:", filteredSections.count)
+        allSections = response.categories.map { ($0.title, $0.items) }
+        filteredSections = allSections
+        
+        print("✅ Sections Loaded:", filteredSections.count)
         collectionView.reloadData()
     }
 }
+
 extension MenuViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -68,7 +86,6 @@ extension MenuViewController: UICollectionViewDataSource {
         
         cell.nameLabel.text = item.name
         
-        // PRICE
         if let price = item.price {
             cell.priceLabel.text = String(format: "%.2f AZN", price)
         } else if let sizes = item.sizes {
@@ -79,6 +96,7 @@ extension MenuViewController: UICollectionViewDataSource {
         } else {
             cell.priceLabel.text = ""
         }
+        
         if let id = item.id {
             cell.drinkImageView.image = UIImage(named: id.toImageName()) ?? UIImage(named: "placeholder")
         } else {
@@ -87,9 +105,7 @@ extension MenuViewController: UICollectionViewDataSource {
         
         return cell
     }
-}
-extension MenuViewController {
-
+    
     func collectionView(_ collectionView: UICollectionView,
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
@@ -99,6 +115,7 @@ extension MenuViewController {
             withReuseIdentifier: "HeaderView",
             for: indexPath
         )
+        
         header.subviews.forEach { $0.removeFromSuperview() }
         
         let label = UILabel(frame: CGRect(x: 12, y: 0, width: collectionView.frame.width, height: 30))
@@ -110,6 +127,7 @@ extension MenuViewController {
         return header
     }
 }
+
 extension MenuViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
@@ -123,6 +141,25 @@ extension MenuViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
         return CGSize(width: collectionView.frame.width, height: 32)
+    }
+}
+
+extension MenuViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let query = searchController.searchBar.text?.lowercased() ?? ""
+        
+        if query.isEmpty {
+            filteredSections = allSections
+        } else {
+            filteredSections = allSections.compactMap { (title, items) in
+                let filtered = items.filter { $0.name.lowercased().contains(query) }
+                return filtered.isEmpty ? nil : (title, filtered)
+            }
+        }
+        
+        collectionView.reloadData()
     }
 }
