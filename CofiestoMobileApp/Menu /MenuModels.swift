@@ -26,3 +26,8 @@ struct MenuItem: Decodable {
     let sizes: [String: Double]?
     let description: String?
 }
+extension String {
+    func tolmageName() -> String {
+        return self.replacingOccurrences(of: "_", with: " ")
+    }
+}

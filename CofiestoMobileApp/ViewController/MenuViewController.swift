@@ -164,7 +164,12 @@ extension MenuViewController: UISearchResultsUpdating {
     }
 }
 func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    let item = filteredItems[indexPath.item]
+    
+}
+func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+    let section = filteredSections[indexPath.section]
+    let item = section.items[indexPath.item]
 
     let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
     vc.item = item

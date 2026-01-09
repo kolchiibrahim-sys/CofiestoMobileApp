@@ -167,6 +167,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="-"/>
+                                <connections>
+                                    <action selector="minusTapped:" destination="5WV-a9-Zep" eventType="touchUpInside" id="i0a-3q-4Bd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quantityLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUz-gq-NCh">
                                 <rect key="frame" x="16" y="556" width="30" height="30"/>
@@ -185,12 +188,18 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="addToCartTapped:" destination="5WV-a9-Zep" eventType="touchUpInside" id="z3W-Ej-q0u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMl-Sv-Xle">
                                 <rect key="frame" x="16" y="594" width="40" height="34.333333333333371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="+"/>
+                                <connections>
+                                    <action selector="plusTapped:" destination="5WV-a9-Zep" eventType="touchUpInside" id="uxb-Pd-6BQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AVb-85-BYr"/>
@@ -214,6 +223,15 @@
                             <constraint firstItem="dft-0R-RSr" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" constant="16" id="vSI-tj-rds"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="mW5-tD-2UR" id="xAC-8j-8C2"/>
+                        <outlet property="minusButton" destination="6Pm-eJ-rmc" id="dap-hA-ens"/>
+                        <outlet property="nameLabel" destination="gfW-Ww-Dac" id="VXL-a8-d23"/>
+                        <outlet property="plusButton" destination="wMl-Sv-Xle" id="01o-X0-iCd"/>
+                        <outlet property="priceLabel" destination="dft-0R-RSr" id="7fc-og-nsJ"/>
+                        <outlet property="productImageView" destination="NaM-BS-sHN" id="G1o-Fw-eEh"/>
+                        <outlet property="quantityLabel" destination="kUz-gq-NCh" id="YRT-Q6-Wbw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7t7-nZ-Krt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeD-6o-WuR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3156" y="304"/>
+            <point key="canvasLocation" x="4081.679389312977" y="303.52112676056339"/>
         </scene>
         <!--Loyalty View Controller-->
         <scene sceneID="oVI-ba-Gkf">
@@ -286,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3G-0V-TAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4004" y="304"/>
+            <point key="canvasLocation" x="4930.5343511450383" y="303.52112676056339"/>
         </scene>
         <!--Item-->
         <scene sceneID="mH9-t6-ZLT">
@@ -357,7 +375,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0I8-kq-1ak" kind="relationship" relationship="rootViewController" id="xrs-WR-gQ1"/>
+                        <segue destination="Dpi-iy-0LY" kind="relationship" relationship="rootViewController" id="xrs-WR-gQ1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPC-fZ-R6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -382,6 +400,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLR-gv-ZfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4004" y="1089"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oR6-fh-maF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dpi-iy-0LY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="kQ1-gO-dwZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hMX-cq-ccF">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0I8-kq-1ak" kind="relationship" relationship="rootViewController" id="cO3-kk-pTr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zxm-rw-6gV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3154.9618320610684" y="303.52112676056339"/>
         </scene>
     </scenes>
     <resources>
