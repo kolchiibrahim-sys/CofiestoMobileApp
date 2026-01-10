@@ -189,32 +189,42 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
+                                    <action selector="addButtonTapped:" destination="5WV-a9-Zep" eventType="touchUpInside" id="HAK-zm-d1D"/>
                                     <action selector="addToCartTapped:" destination="5WV-a9-Zep" eventType="touchUpInside" id="z3W-Ej-q0u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMl-Sv-Xle">
-                                <rect key="frame" x="64" y="521" width="40" height="34.333333333333371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMl-Sv-Xle">
+                                <rect key="frame" x="64" y="522.33333333333337" width="34.333333333333343" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="+"/>
                                 <connections>
                                     <action selector="plusTapped:" destination="5WV-a9-Zep" eventType="touchUpInside" id="1C8-Op-4xg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ingredientsLabel" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IY-0y-H9G">
+                                <rect key="frame" x="16" y="606" width="114" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AVb-85-BYr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Pm-eJ-rmc" firstAttribute="top" secondItem="dft-0R-RSr" secondAttribute="bottom" constant="7.6666666666666856" id="36c-qR-g94"/>
+                            <constraint firstItem="wMl-Sv-Xle" firstAttribute="leading" secondItem="6Pm-eJ-rmc" secondAttribute="trailing" constant="8" id="Bjn-w7-4XS"/>
                             <constraint firstItem="6Pm-eJ-rmc" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" constant="16" id="Bqa-qV-mZQ"/>
                             <constraint firstItem="NaM-BS-sHN" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" id="FQb-ZC-qbI"/>
                             <constraint firstItem="kUz-gq-NCh" firstAttribute="leading" secondItem="6Pm-eJ-rmc" secondAttribute="leading" id="MdR-tb-LY5"/>
                             <constraint firstItem="AVb-85-BYr" firstAttribute="bottom" secondItem="mW5-tD-2UR" secondAttribute="bottom" constant="16" id="PQo-ai-DmQ"/>
+                            <constraint firstItem="wMl-Sv-Xle" firstAttribute="top" secondItem="dft-0R-RSr" secondAttribute="bottom" constant="12" id="SeM-Ih-bH7"/>
                             <constraint firstItem="dft-0R-RSr" firstAttribute="top" secondItem="gfW-Ww-Dac" secondAttribute="bottom" constant="8" id="Tzy-JU-Fc2"/>
                             <constraint firstItem="kUz-gq-NCh" firstAttribute="top" secondItem="6Pm-eJ-rmc" secondAttribute="bottom" constant="-2" id="Xzm-ib-yMW"/>
                             <constraint firstItem="NaM-BS-sHN" firstAttribute="top" secondItem="AVb-85-BYr" secondAttribute="top" constant="70" id="fiz-lM-Kpg"/>
                             <constraint firstItem="gfW-Ww-Dac" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" constant="16" id="gKz-dd-uw6"/>
                             <constraint firstItem="AVb-85-BYr" firstAttribute="trailing" secondItem="gfW-Ww-Dac" secondAttribute="trailing" constant="16" id="oBD-2L-48P"/>
+                            <constraint firstItem="9IY-0y-H9G" firstAttribute="leading" secondItem="kUz-gq-NCh" secondAttribute="leading" id="pR2-WA-UgA"/>
+                            <constraint firstItem="9IY-0y-H9G" firstAttribute="top" secondItem="kUz-gq-NCh" secondAttribute="bottom" constant="20" id="rsU-5u-VnE"/>
                             <constraint firstItem="mW5-tD-2UR" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" constant="16" id="sSQ-TG-9wX"/>
                             <constraint firstItem="AVb-85-BYr" firstAttribute="trailing" secondItem="NaM-BS-sHN" secondAttribute="trailing" id="tOf-DJ-eir"/>
                             <constraint firstItem="AVb-85-BYr" firstAttribute="trailing" secondItem="mW5-tD-2UR" secondAttribute="trailing" constant="16" id="tUE-DG-Zt3"/>
@@ -224,11 +234,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="mW5-tD-2UR" id="xAC-8j-8C2"/>
-                        <outlet property="nameLabel" destination="gfW-Ww-Dac" id="VXL-a8-d23"/>
-                        <outlet property="priceLabel" destination="dft-0R-RSr" id="7fc-og-nsJ"/>
-                        <outlet property="productImageView" destination="NaM-BS-sHN" id="xSl-oH-ktO"/>
-                        <outlet property="quantityLabel" destination="kUz-gq-NCh" id="YRT-Q6-Wbw"/>
+                        <outlet property="addButton" destination="mW5-tD-2UR" id="kZH-Ut-xo6"/>
+                        <outlet property="nameLabel" destination="gfW-Ww-Dac" id="kpk-sZ-5s6"/>
+                        <outlet property="priceLabel" destination="dft-0R-RSr" id="byd-Zg-fbU"/>
+                        <outlet property="productImageView" destination="NaM-BS-sHN" id="qQQ-Al-wVt"/>
+                        <outlet property="quantityLabel" destination="kUz-gq-NCh" id="MEx-5k-133"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7t7-nZ-Krt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -422,6 +432,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

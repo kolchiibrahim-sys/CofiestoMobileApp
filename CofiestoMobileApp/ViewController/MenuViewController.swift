@@ -31,7 +31,7 @@ class MenuViewController: UIViewController {
             layout.sectionInset = UIEdgeInsets(top: 10, left: 12, bottom: 10, right: 12)
 
             let width = (view.frame.width - 12 - 12 - 10) / 2
-            layout.itemSize = CGSize(width: width, height: width * 1.45)
+            layout.itemSize = CGSize(width: width, height: 240)
         }
     }
 }
