@@ -14,6 +14,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
 
+
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 12

@@ -35,17 +35,17 @@
                         <color key="textColor" systemColor="systemGrayColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ingredientsLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYg-Fw-BDc">
-                        <rect key="frame" x="64" y="269" width="127" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ingredientsLabel" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYg-Fw-BDc">
+                        <rect key="frame" x="16" y="144" width="114" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="zYg-Fw-BDc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="4mU-dt-CMI"/>
                 <constraint firstItem="xVW-rl-KDd" firstAttribute="top" secondItem="rC4-F4-Ip9" secondAttribute="bottom" constant="8" symbolic="YES" id="9kt-dw-C0y"/>
                 <constraint firstItem="BQj-FA-QCF" firstAttribute="leading" secondItem="xVW-rl-KDd" secondAttribute="leading" id="F5x-Ye-yOR"/>
                 <constraint firstItem="xVW-rl-KDd" firstAttribute="top" secondItem="rC4-F4-Ip9" secondAttribute="bottom" constant="8" id="Fsl-Yb-dhU"/>
@@ -54,6 +54,7 @@
                 <constraint firstAttribute="trailing" secondItem="rC4-F4-Ip9" secondAttribute="trailing" constant="8" id="UZM-nP-bcs"/>
                 <constraint firstItem="rC4-F4-Ip9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Y8f-84-LIh"/>
                 <constraint firstItem="xVW-rl-KDd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="f6n-C7-ry1"/>
+                <constraint firstItem="zYg-Fw-BDc" firstAttribute="top" secondItem="xVW-rl-KDd" secondAttribute="bottom" constant="20" id="j8d-y8-yLL"/>
                 <constraint firstItem="rC4-F4-Ip9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="l7n-Ib-w7h"/>
                 <constraint firstItem="BQj-FA-QCF" firstAttribute="trailing" secondItem="xVW-rl-KDd" secondAttribute="trailing" id="wvg-Fo-2et"/>
             </constraints>

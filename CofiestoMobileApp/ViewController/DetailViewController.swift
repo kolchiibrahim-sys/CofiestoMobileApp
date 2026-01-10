@@ -12,7 +12,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
-    
+    @IBAction func plusTapped(_ sender: UIButton) { }
+    @IBAction func minusTapped(_ sender: UIButton) { }
     var item: MenuItem?
     var quantity = 1
     
@@ -35,5 +36,9 @@ class DetailViewController: UIViewController {
         nameLabel.text = item.name
         priceLabel.text = String(format: "%.2f AZN", item.price)
         productImageView.image = UIImage(named: item.image) ?? UIImage(named: "placeholder")
+        
+        ingredientsLabel.text = item.ingredients
+            .map { "• " + $0 }
+            .joined(separator: "\n")
     }
 }
