@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
     
     @IBAction func addButtonTapped(_ sender: UIButton) {
         guard let item = item else { return }
-        CartManager.shared.add(item: item, quantity: quantity)
+        CartManager.shared.add(item, quantity: quantity)
         navigationController?.popViewController(animated: true)
     }
 
