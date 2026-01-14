@@ -13,24 +13,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     
-    @IBAction func plusTapped(_ sender: UIButton) {
-        quantity += 1
-        quantityLabel.text = "\(quantity)"
-    }
-    
-    @IBAction func minusTapped(_ sender: UIButton) {
-        if quantity > 1 {
-            quantity -= 1
-            quantityLabel.text = "\(quantity)"
-        }
-    }
-    
-    @IBAction func addButtonTapped(_ sender: UIButton) {
-        guard let item = item else { return }
-        CartManager.shared.add(item, quantity: quantity)
-        navigationController?.popViewController(animated: true)
-    }
-
     var item: MenuItem?
     var quantity = 1
     
@@ -53,5 +35,24 @@ class DetailViewController: UIViewController {
         nameLabel.text = item.name
         priceLabel.text = String(format: "%.2f AZN", item.price)
         productImageView.image = UIImage(named: item.image) ?? UIImage(named: "placeholder")
+    }
+    
+    @IBAction func plusTapped(_ sender: UIButton) {
+        quantity += 1
+        quantityLabel.text = "\(quantity)"
+    }
+    
+    @IBAction func minusTapped(_ sender: UIButton) {
+        if quantity > 1 {
+            quantity -= 1
+            quantityLabel.text = "\(quantity)"
+        }
+    }
+    
+    @IBAction func addButtonTapped(_ sender: UIButton) {
+        guard let item = item else { return }
+        CartManager.shared.add(item, quantity: quantity)
+
+        navigationController?.popViewController(animated: true)
     }
 }

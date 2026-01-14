@@ -34,6 +34,10 @@ class CartViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+
+        // XIB qeydiyyatı (Vacib!)
+        tableView.register(UINib(nibName: "CartCell", bundle: nil),
+                           forCellReuseIdentifier: "CartCell")
     }
 
     private func updateTotal() {
@@ -41,21 +45,24 @@ class CartViewController: UIViewController {
     }
 
     @IBAction func checkoutTapped(_ sender: UIButton) {
-        // burda hələlik heçnə etmədik — sən belə istəyirsən
-        print("Checkout tapped — hazırda boşdur")
+        print("Checkout tapped")
     }
 }
 
 extension CartViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        CartManager.shared.items.count
+        return CartManager.shared.items.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as! CartCell
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell",
+                                                 for: indexPath) as! CartCell
+
         let cartItem = CartManager.shared.items[indexPath.row]
         cell.configure(with: cartItem)
+
         return cell
     }
 }

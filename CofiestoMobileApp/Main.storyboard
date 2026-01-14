@@ -82,7 +82,6 @@
         <!--Cart View Controller-->
         <scene sceneID="r9s-dx-hPH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hXX-kx-cbr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="CF7-9l-mJU" customClass="CartViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="csC-m2-CUr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -117,6 +116,7 @@
                         <outlet property="totalLabel" destination="Maq-FD-1Pe" id="Bo1-6h-isZ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXX-kx-cbr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="770.2290076335878" y="1094.3661971830986"/>
         </scene>
@@ -241,7 +241,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMl-Sv-Xle">
-                                <rect key="frame" x="64" y="520" width="40" height="37"/>
+                                <rect key="frame" x="64" y="522.33333333333337" width="34.333333333333343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3Hh-zI-OBM"/>
                                 </constraints>
