@@ -13,7 +13,7 @@
         <tableViewCell contentMode="scaleToFill" restorationIdentifier="CartCell" selectionStyle="default" indentationWidth="10" rowHeight="79" id="KGk-i7-Jjw" customClass="CartCell" customModule="CofiestoMobileApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="288" height="79"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="CartCell" customModule="CofiestoMobileApp" customModuleProvider="target">
                 <rect key="frame" x="0.0" y="0.0" width="288" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -61,7 +61,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="nameLabel" destination="euz-Sc-4N6" id="kmC-t7-CMN"/>
+                <outlet property="priceLabel" destination="3ef-Kf-egu" id="h1T-zU-QJn"/>
                 <outlet property="productImageView" destination="THX-ht-D5H" id="adl-t8-sRm"/>
+                <outlet property="quantityLabel" destination="DlU-yN-w9B" id="ObW-fI-Nmo"/>
             </connections>
             <point key="canvasLocation" x="33.587786259541986" y="130.63380281690141"/>
         </tableViewCell>
