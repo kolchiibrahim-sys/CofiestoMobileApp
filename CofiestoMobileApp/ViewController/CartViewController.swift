@@ -9,13 +9,15 @@ import UIKit
 class CartViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var totalLabel: UILabel!
-    @IBOutlet weak var checkoutButton: UIButton!
+
+    private let bottomContainer = UIView()
+    private let totalLabel = UILabel()
+    private let checkoutButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Cart"
-        setupUI()
+        setupBottomBar()  
         setupTableView()
     }
 
@@ -25,26 +27,68 @@ class CartViewController: UIViewController {
         updateTotal()
     }
 
-    private func setupUI() {
-        checkoutButton.layer.cornerRadius = 12
-        checkoutButton.backgroundColor = UIColor(red: 63/255, green: 174/255, blue: 90/255, alpha: 1)
-        checkoutButton.setTitleColor(.white, for: .normal)
-    }
-
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
 
-        // XIB qeydiyyatı (Vacib!)
         tableView.register(UINib(nibName: "CartCell", bundle: nil),
                            forCellReuseIdentifier: "CartCell")
+
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomContainer.topAnchor)
+        ])
+    }
+
+    private func setupBottomBar() {
+        bottomContainer.translatesAutoresizingMaskIntoConstraints = false
+        totalLabel.translatesAutoresizingMaskIntoConstraints = false
+        checkoutButton.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(bottomContainer)
+        bottomContainer.addSubview(totalLabel)
+        bottomContainer.addSubview(checkoutButton)
+
+        bottomContainer.backgroundColor = .white
+
+        NSLayoutConstraint.activate([
+            bottomContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bottomContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bottomContainer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomContainer.heightAnchor.constraint(equalToConstant: 80)
+        ])
+
+        totalLabel.font = .systemFont(ofSize: 18, weight: .medium)
+        totalLabel.textColor = .black
+
+        NSLayoutConstraint.activate([
+            totalLabel.leadingAnchor.constraint(equalTo: bottomContainer.leadingAnchor, constant: 16),
+            totalLabel.centerYAnchor.constraint(equalTo: bottomContainer.centerYAnchor)
+        ])
+
+        checkoutButton.backgroundColor = UIColor(red: 63/255, green: 174/255, blue: 90/255, alpha: 1)
+        checkoutButton.layer.cornerRadius = 12
+        checkoutButton.setTitle("Checkout", for: .normal)
+        checkoutButton.setTitleColor(.white, for: .normal)
+        checkoutButton.addTarget(self, action: #selector(checkoutTapped), for: .touchUpInside)
+
+        NSLayoutConstraint.activate([
+            checkoutButton.trailingAnchor.constraint(equalTo: bottomContainer.trailingAnchor, constant: -16),
+            checkoutButton.centerYAnchor.constraint(equalTo: bottomContainer.centerYAnchor),
+            checkoutButton.heightAnchor.constraint(equalToConstant: 44),
+            checkoutButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 120)
+        ])
     }
 
     private func updateTotal() {
         totalLabel.text = String(format: "%.2f AZN", CartManager.shared.total)
     }
 
-    @IBAction func checkoutTapped(_ sender: UIButton) {
+    @objc private func checkoutTapped() {
         print("Checkout tapped")
     }
 }
@@ -57,6 +101,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell",
                                                  for: indexPath) as! CartCell
 
@@ -66,3 +111,4 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
+
