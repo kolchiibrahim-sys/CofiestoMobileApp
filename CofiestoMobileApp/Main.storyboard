@@ -135,17 +135,34 @@
             </objects>
             <point key="canvasLocation" x="1587.0229007633586" y="1088.7323943661972"/>
         </scene>
-        <!--About View Controller-->
+        <!--About Us View Controller-->
         <scene sceneID="uf7-yP-D27">
             <objects>
-                <viewController storyboardIdentifier="AboutViewController" id="M0Y-48-Zcl" customClass="AboutViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutUsViewController" id="M0Y-48-Zcl" customClass="AboutUsViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lhh-9X-eE5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhQ-JQ-PjI">
+                                <rect key="frame" x="0.0" y="172" width="393" height="280"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="0CR-Sl-a7t"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="yjp-pa-jA7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rhQ-JQ-PjI" firstAttribute="top" secondItem="yjp-pa-jA7" secondAttribute="top" id="3JD-Cc-UeH"/>
+                            <constraint firstItem="rhQ-JQ-PjI" firstAttribute="trailing" secondItem="yjp-pa-jA7" secondAttribute="trailing" id="OqI-Kg-VjW"/>
+                            <constraint firstItem="rhQ-JQ-PjI" firstAttribute="leading" secondItem="yjp-pa-jA7" secondAttribute="leading" id="anD-3k-Lny"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2GE-Na-yfQ"/>
+                    <connections>
+                        <outlet property="videoContainerView" destination="rhQ-JQ-PjI" id="XNN-KP-SE0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pN5-Cj-ECV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -521,7 +538,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

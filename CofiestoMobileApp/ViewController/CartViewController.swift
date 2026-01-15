@@ -89,8 +89,11 @@ class CartViewController: UIViewController {
     }
 
     @objc private func checkoutTapped() {
-        print("Checkout tapped")
+        let checkoutVC = CheckoutViewController()
+        checkoutVC.total = CartManager.shared.total
+        navigationController?.pushViewController(checkoutVC, animated: true)
     }
+
 }
 
 extension CartViewController: UITableViewDataSource, UITableViewDelegate {
