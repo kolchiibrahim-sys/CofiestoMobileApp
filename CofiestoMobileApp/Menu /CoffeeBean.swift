@@ -9,4 +9,5 @@ struct CoffeeBean {
     let name: String
     let flavors: String
     let region: String
+    let image: String
 }

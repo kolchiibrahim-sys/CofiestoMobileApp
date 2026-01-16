@@ -99,13 +99,6 @@
       "price": 9
     },
     {
-      "name": "Lavender Raf",
-      "category": "Raf",
-      "ingredients": ["Double espresso", "Milk", "Lavender syrup", "Cream"],
-      "image": "LavenderRaf.png",
-      "price": 9
-    },
-    {
       "name": "Macadamia Raf",
       "category": "Raf",
       "ingredients": ["Double espresso", "Milk", "Macadamia syrup", "Cream"],

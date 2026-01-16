@@ -11,28 +11,27 @@ class CoffeeBeansViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     let beans: [CoffeeBean] = [
-        .init(name: "Ethiopia", flavors: "Floral · Citrus", region: "Africa"),
-        .init(name: "Kenya", flavors: "Berry · Blackcurrant", region: "Africa"),
-        .init(name: "Rwanda", flavors: "Tea-like · Sweet", region: "Africa"),
-        .init(name: "Burundi", flavors: "Pear · Floral", region: "Africa"),
-        .init(name: "Tanzania", flavors: "Citrus · Bright", region: "Africa"),
+        .init(name: "Ethiopia", flavors: "Floral · Citrus", region: "Africa", image: "images"),
+        .init(name: "Kenya", flavors: "Berry · Blackcurrant", region: "Africa",image: "images-1"),
+        .init(name: "Rwanda", flavors: "Tea-like · Sweet", region: "Africa",image: "images-2"),
+        .init(name: "Burundi", flavors: "Pear · Floral", region: "Africa",image: "images-3"),
+        .init(name: "Tanzania", flavors: "Citrus · Bright", region: "Africa",image: "images-4"),
 
-        .init(name: "Brazil", flavors: "Chocolate · Nutty", region: "South America"),
-        .init(name: "Colombia", flavors: "Balanced · Sweet", region: "South America"),
-        .init(name: "Peru", flavors: "Clean · Smooth", region: "South America"),
-        .init(name: "Bolivia", flavors: "Sweet · Delicate", region: "South America"),
+        .init(name: "Brazil", flavors: "Chocolate · Nutty", region: "South America",image: "images-5"),
+        .init(name: "Colombia", flavors: "Balanced · Sweet", region: "South America",image: "images-6"),
+        .init(name: "Peru", flavors: "Clean · Smooth", region: "South America",image: "images-7"),
+        .init(name: "Bolivia", flavors: "Sweet · Delicate", region: "South America",image: "images-8"),
 
-        .init(name: "Guatemala", flavors: "Nutty · Cocoa", region: "Central America"),
-        .init(name: "Costa Rica", flavors: "Honey · Bright", region: "Central America"),
-        .init(name: "El Salvador", flavors: "Chocolate · Sweet", region: "Central America"),
-        .init(name: "Honduras", flavors: "Sweet · Mild", region: "Central America"),
-        .init(name: "Nicaragua", flavors: "Mild · Nutty", region: "Central America"),
+        .init(name: "Guatemala", flavors: "Nutty · Cocoa", region: "Central America",image: "images-9"),
+        .init(name: "Costa Rica", flavors: "Honey · Bright", region: "Central America",image: "images-10"),
+        .init(name: "El Salvador", flavors: "Chocolate · Sweet", region: "Central America",image: "images-11"),
+        .init(name: "Honduras", flavors: "Sweet · Mild", region: "Central America",image: "images-12"),
+        .init(name: "Nicaragua", flavors: "Mild · Nutty", region: "Central America",image: "images-13"),
 
-        .init(name: "Indonesia", flavors: "Earthy · Spicy", region: "Asia-Pacific"),
-        .init(name: "Papua New Guinea", flavors: "Tropical · Sweet", region: "Asia-Pacific"),
-        .init(name: "Vietnam", flavors: "Chocolate · Heavy", region: "Asia-Pacific"),
-
-        .init(name: "Yemen", flavors: "Winey · Raisin", region: "Arabia")
+        .init(name: "Indonesia", flavors: "Earthy · Spicy", region: "Asia-Pacific",image: "images-14"),
+        .init(name: "Papua New Guinea", flavors: "Tropical · Sweet", region: "Asia-Pacific",image: "images-15"),
+        .init(name: "Vietnam", flavors: "Chocolate · Heavy", region: "Asia-Pacific",image: "images-16"),
+        .init(name: "Yemen", flavors: "Winey · Raisin", region: "Arabia",image: "images-17")
     ]
 
 
