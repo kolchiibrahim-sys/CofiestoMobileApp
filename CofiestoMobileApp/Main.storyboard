@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -168,15 +169,43 @@
             </objects>
             <point key="canvasLocation" x="566" y="304"/>
         </scene>
-        <!--Beans View Controller-->
+        <!--Coffee Beans View Controller-->
         <scene sceneID="Zyr-KQ-sVP">
             <objects>
-                <viewController storyboardIdentifier="BeansViewController" id="sr4-qs-Ssa" customClass="BeansViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoffeeBeansViewController" id="sr4-qs-Ssa" customClass="CoffeeBeansViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u0v-ZS-eKj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l0c-B4-pta">
+                                <rect key="frame" x="0.0" y="192" width="393" height="543"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Bi-z9-1cb">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wXh-Ux-aT4">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Rwx-Am-wWB">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="P5a-fQ-i8X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P5a-fQ-i8X" firstAttribute="bottom" secondItem="l0c-B4-pta" secondAttribute="bottom" id="BId-BG-J2Y"/>
+                            <constraint firstItem="l0c-B4-pta" firstAttribute="leading" secondItem="P5a-fQ-i8X" secondAttribute="leading" id="Dt8-CC-R4B"/>
+                            <constraint firstItem="l0c-B4-pta" firstAttribute="top" secondItem="P5a-fQ-i8X" secondAttribute="top" constant="20" id="mjl-Oq-4Ud"/>
+                            <constraint firstItem="P5a-fQ-i8X" firstAttribute="trailing" secondItem="l0c-B4-pta" secondAttribute="trailing" id="s8w-Zi-k8v"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="znp-x4-JFP"/>
                 </viewController>
@@ -539,6 +568,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -9,7 +9,7 @@ import AVKit
 
 class AboutUsViewController: UIViewController {
 
-    @IBOutlet weak var videoContainerView: UIView!   
+    @IBOutlet weak var videoContainerView: UIView!
 
     private let scrollView = UIScrollView()
     private let stackView: UIStackView = {
@@ -69,19 +69,28 @@ Feel the craft in every cup.
     }
 
     private func setupPatternBackground() {
-        if let pattern = UIImage(named: "pattern") {
-            let imgView = UIImageView(image: pattern)
-            imgView.frame = view.bounds
-            imgView.contentMode = .scaleAspectFill
-            imgView.alpha = 0.06
-            view.addSubview(imgView)
-            view.sendSubviewToBack(imgView)
+        if let pattern = UIImage(named: "CofiestoPattern") {
+            view.backgroundColor = UIColor(patternImage: pattern)
         }
+
+        let overlay = UIView()
+        overlay.backgroundColor = UIColor.white.withAlphaComponent(0.85)
+        overlay.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(overlay)
+
+        NSLayoutConstraint.activate([
+            overlay.topAnchor.constraint(equalTo: videoContainerView.bottomAnchor),
+            overlay.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            overlay.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            overlay.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 
     private func setupVideo() {
-        guard let path = Bundle.main.path(forResource: "Cofiesto Turu", ofType:"mp4") else { return }
-        let url = URL(fileURLWithPath: path)
+        guard let url = Bundle.main.url(forResource: "CofiestoTuru", withExtension: "mp4") else {
+            print("VIDEO TAPILMADI")
+            return
+        }
 
         player = AVPlayer(url: url)
         player?.isMuted = true
@@ -108,7 +117,7 @@ Feel the craft in every cup.
         scrollView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: videoContainerView.bottomAnchor, constant: 0),
+            scrollView.topAnchor.constraint(equalTo: videoContainerView.bottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)

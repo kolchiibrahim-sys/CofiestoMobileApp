@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class BeansViewController: UIViewController {
+class CoffeeBeansViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
