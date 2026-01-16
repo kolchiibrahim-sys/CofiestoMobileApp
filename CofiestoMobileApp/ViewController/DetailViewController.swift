@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var ingredientsLabel: UILabel!
     
     var item: MenuItem?
     var quantity = 1
@@ -27,14 +28,26 @@ class DetailViewController: UIViewController {
         addButton.layer.cornerRadius = 12
         addButton.setTitle("Add to Cart", for: .normal)
         addButton.setTitleColor(.white, for: .normal)
+        
         quantityLabel.text = "\(quantity)"
+        
+        ingredientsLabel.numberOfLines = 0
+        ingredientsLabel.lineBreakMode = .byWordWrapping
     }
     
     private func loadData() {
         guard let item = item else { return }
+        
         nameLabel.text = item.name
         priceLabel.text = String(format: "%.2f AZN", item.price)
         productImageView.image = UIImage(named: item.image) ?? UIImage(named: "placeholder")
+        
+        if !item.ingredients.isEmpty {
+            ingredientsLabel.isHidden = false
+            ingredientsLabel.text = item.ingredients.joined(separator: ", ")
+        } else {
+            ingredientsLabel.isHidden = true
+        }
     }
     
     @IBAction func plusTapped(_ sender: UIButton) {
@@ -52,7 +65,6 @@ class DetailViewController: UIViewController {
     @IBAction func addButtonTapped(_ sender: UIButton) {
         guard let item = item else { return }
         CartManager.shared.add(item, quantity: quantity)
-
         navigationController?.popViewController(animated: true)
     }
 }

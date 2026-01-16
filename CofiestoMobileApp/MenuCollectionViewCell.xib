@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,7 +58,7 @@
                 <constraint firstItem="BQj-FA-QCF" firstAttribute="trailing" secondItem="xVW-rl-KDd" secondAttribute="trailing" id="wvg-Fo-2et"/>
             </constraints>
             <connections>
-                <outlet property="ingredientsLabel" destination="zYg-Fw-BDc" id="fkn-tH-2mA"/>
+                <outlet property="ingredientsLabel" destination="zYg-Fw-BDc" id="QZk-WZ-ICc"/>
                 <outlet property="nameLabel" destination="xVW-rl-KDd" id="XhJ-Xm-pZS"/>
                 <outlet property="priceLabel" destination="BQj-FA-QCF" id="kyf-2o-m5k"/>
                 <outlet property="productImageView" destination="rC4-F4-Ip9" id="sjJ-nR-p6K"/>

@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-266" y="304"/>
+            <point key="canvasLocation" x="-318" y="304"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="r9s-dx-hPH">
@@ -111,11 +111,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXX-kx-cbr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770.2290076335878" y="1094.3661971830986"/>
+            <point key="canvasLocation" x="566" y="1089"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="oHH-2H-Ght">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jww-Io-1Lx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="MainTabBarController" id="lQz-Xs-Vpk" customClass="MainTabBarController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="SLd-Qf-6lp"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8GV-ic-pwC">
@@ -126,15 +127,13 @@
                     <connections>
                         <segue destination="3v7-Hi-rE0" kind="relationship" relationship="viewControllers" id="KKN-rt-xVf"/>
                         <segue destination="7PX-W2-fhr" kind="relationship" relationship="viewControllers" id="n7L-Ra-hK7"/>
-                        <segue destination="koc-9b-5Bu" kind="relationship" relationship="viewControllers" id="Zgy-px-utw"/>
                         <segue destination="9vP-Fa-rNj" kind="relationship" relationship="viewControllers" id="zmG-0C-Sa5"/>
                         <segue destination="2ZS-TE-6e8" kind="relationship" relationship="viewControllers" id="Z59-XI-AQr"/>
                         <segue destination="Sgt-w0-Wjz" kind="relationship" relationship="viewControllers" id="5Q9-hP-fys"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jww-Io-1Lx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1587.0229007633586" y="1088.7323943661972"/>
+            <point key="canvasLocation" x="1518" y="1682"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="uf7-yP-D27">
@@ -254,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rm9-5Z-RGM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1833" y="214"/>
+            <point key="canvasLocation" x="-1859" y="304"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="8Ku-at-sKU">
@@ -289,7 +288,9 @@
                                     <constraint firstAttribute="height" constant="40" id="fWh-Cd-ZSr"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="-"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-">
+                                    <color key="baseBackgroundColor" red="0.089887567880000005" green="0.1778938525" blue="0.091674686219999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="minusTapped:" destination="5WV-a9-Zep" eventType="touchUpInside" id="ZXe-58-rlq"/>
                                 </connections>
@@ -310,7 +311,9 @@
                                     <constraint firstAttribute="height" constant="55" id="S4b-Fw-G0w"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="CofiestoPattern" title="Button">
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="addButtonTapped:" destination="5WV-a9-Zep" eventType="touchUpInside" id="g5H-yl-Qvw"/>
                                 </connections>
@@ -321,27 +324,24 @@
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMl-Sv-Xle">
-                                <rect key="frame" x="64" y="522.33333333333337" width="34.333333333333343" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3Hh-zI-OBM"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMl-Sv-Xle">
+                                <rect key="frame" x="72" y="523.66666666666663" width="34.333333333333343" height="34.333333333333371"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="+"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+">
+                                    <color key="baseBackgroundColor" red="0.158003323" green="0.31269974810000001" blue="0.16114469889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="plusTapped:" destination="5WV-a9-Zep" eventType="touchUpInside" id="1C8-Op-4xg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AVb-85-BYr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.65646021842956537" blue="0.48459195475512196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Pm-eJ-rmc" firstAttribute="top" secondItem="dft-0R-RSr" secondAttribute="bottom" constant="7.6666666666666856" id="36c-qR-g94"/>
-                            <constraint firstItem="wMl-Sv-Xle" firstAttribute="top" secondItem="dft-0R-RSr" secondAttribute="bottom" constant="12" id="5YV-lY-nnN"/>
                             <constraint firstItem="6Pm-eJ-rmc" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" constant="16" id="Bqa-qV-mZQ"/>
-                            <constraint firstItem="wMl-Sv-Xle" firstAttribute="leading" secondItem="6Pm-eJ-rmc" secondAttribute="trailing" constant="8" id="EiC-Vm-A7x"/>
                             <constraint firstItem="NaM-BS-sHN" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" id="FQb-ZC-qbI"/>
-                            <constraint firstItem="wMl-Sv-Xle" firstAttribute="top" secondItem="dft-0R-RSr" secondAttribute="bottom" constant="12" id="Ibp-01-MfI"/>
                             <constraint firstItem="kUz-gq-NCh" firstAttribute="leading" secondItem="6Pm-eJ-rmc" secondAttribute="leading" id="MdR-tb-LY5"/>
                             <constraint firstItem="AVb-85-BYr" firstAttribute="bottom" secondItem="mW5-tD-2UR" secondAttribute="bottom" constant="16" id="PQo-ai-DmQ"/>
                             <constraint firstItem="dft-0R-RSr" firstAttribute="top" secondItem="gfW-Ww-Dac" secondAttribute="bottom" constant="8" id="Tzy-JU-Fc2"/>
@@ -352,7 +352,6 @@
                             <constraint firstItem="9IY-0y-H9G" firstAttribute="leading" secondItem="kUz-gq-NCh" secondAttribute="leading" id="pR2-WA-UgA"/>
                             <constraint firstItem="9IY-0y-H9G" firstAttribute="top" secondItem="kUz-gq-NCh" secondAttribute="bottom" constant="20" id="rsU-5u-VnE"/>
                             <constraint firstItem="mW5-tD-2UR" firstAttribute="leading" secondItem="AVb-85-BYr" secondAttribute="leading" constant="16" id="sSQ-TG-9wX"/>
-                            <constraint firstItem="wMl-Sv-Xle" firstAttribute="leading" secondItem="6Pm-eJ-rmc" secondAttribute="trailing" constant="8" id="spe-CG-ptO"/>
                             <constraint firstItem="AVb-85-BYr" firstAttribute="trailing" secondItem="NaM-BS-sHN" secondAttribute="trailing" id="tOf-DJ-eir"/>
                             <constraint firstItem="AVb-85-BYr" firstAttribute="trailing" secondItem="mW5-tD-2UR" secondAttribute="trailing" constant="16" id="tUE-DG-Zt3"/>
                             <constraint firstItem="AVb-85-BYr" firstAttribute="bottom" secondItem="mW5-tD-2UR" secondAttribute="bottom" constant="16" id="tYo-r1-eK5"/>
@@ -362,6 +361,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="mW5-tD-2UR" id="kZH-Ut-xo6"/>
+                        <outlet property="ingredientsLabel" destination="9IY-0y-H9G" id="UDU-qb-xO5"/>
                         <outlet property="nameLabel" destination="gfW-Ww-Dac" id="kpk-sZ-5s6"/>
                         <outlet property="priceLabel" destination="dft-0R-RSr" id="byd-Zg-fbU"/>
                         <outlet property="productImageView" destination="NaM-BS-sHN" id="qQQ-Al-wVt"/>
@@ -371,22 +371,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7t7-nZ-Krt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1121.3740458015266" y="303.52112676056339"/>
-        </scene>
-        <!--Branches View Controller-->
-        <scene sceneID="S5Q-Sg-TwW">
-            <objects>
-                <viewController storyboardIdentifier="BranchesViewController" id="9ny-02-t88" customClass="BranchesViewController" customModule="CofiestoMobileApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xM1-83-UAv">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="wEI-8e-F6b"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="PbV-En-i9N"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ma8-fl-rdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2363" y="304"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="MJA-SP-PIJ">
@@ -444,6 +428,7 @@
         <!--Item-->
         <scene sceneID="mH9-t6-ZLT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQ7-fh-sx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3v7-Hi-rE0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="3iZ-lt-efi"/>
                     <toolbarItems/>
@@ -456,9 +441,8 @@
                         <segue destination="M0Y-48-Zcl" kind="relationship" relationship="rootViewController" id="h8E-kj-X4v"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lQ7-fh-sx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2419.0839694656488" y="1088.7323943661972"/>
+            <point key="canvasLocation" x="2363" y="1084"/>
         </scene>
         <!--Item-->
         <scene sceneID="CsS-g8-IIJ">
@@ -477,26 +461,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNo-ed-RZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3330.5343511450378" y="1089.4366197183099"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="15w-1b-Sau">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="koc-9b-5Bu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oMJ-5B-Ogm"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cxH-y5-fYz">
-                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9ny-02-t88" kind="relationship" relationship="rootViewController" id="5h4-dv-aXG"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c8l-BL-PKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4216.0305343511445" y="1088.7323943661972"/>
+            <point key="canvasLocation" x="3155" y="1084"/>
         </scene>
         <!--Item-->
         <scene sceneID="sKQ-s7-jpy">
@@ -583,7 +548,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nkh-Gc-xLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1077" y="1084"/>
+            <point key="canvasLocation" x="-1121" y="1084"/>
         </scene>
         <!--Item-->
         <scene sceneID="eko-Sc-drP">
@@ -602,18 +567,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWg-C2-z6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-156.4885496183206" y="1094.3661971830986"/>
+            <point key="canvasLocation" x="-318" y="1084"/>
         </scene>
     </scenes>
     <resources>
+        <image name="CofiestoPattern" width="1920" height="1080"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
