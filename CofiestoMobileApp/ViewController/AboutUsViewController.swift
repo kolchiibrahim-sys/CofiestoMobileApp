@@ -9,7 +9,7 @@ import AVKit
 
 class AboutUsViewController: UIViewController {
 
-    @IBOutlet weak var videoContainerView: UIView!   // storyboarddan gəlir
+    @IBOutlet weak var videoContainerView: UIView!   
 
     private let scrollView = UIScrollView()
     private let stackView: UIStackView = {
@@ -80,7 +80,7 @@ Feel the craft in every cup.
     }
 
     private func setupVideo() {
-        guard let path = Bundle.main.path(forResource: "cofiesto_intro", ofType:"mp4") else { return }
+        guard let path = Bundle.main.path(forResource: "Cofiesto Turu", ofType:"mp4") else { return }
         let url = URL(fileURLWithPath: path)
 
         player = AVPlayer(url: url)

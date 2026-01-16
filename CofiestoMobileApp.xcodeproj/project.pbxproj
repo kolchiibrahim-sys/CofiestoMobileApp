@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		86258EB42F1A30D0006DE89E /* Cofiesto turu.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 86258EB32F1A30D0006DE89E /* Cofiesto turu.mp4 */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		86258EB32F1A30D0006DE89E /* Cofiesto turu.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cofiesto turu.mp4"; sourceTree = "<group>"; };
 		868CDDDD2F07B85100AFBB33 /* CofiestoMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CofiestoMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -47,6 +52,7 @@
 			children = (
 				868CDDDF2F07B85100AFBB33 /* CofiestoMobileApp */,
 				868CDDDE2F07B85100AFBB33 /* Products */,
+				86258EB32F1A30D0006DE89E /* Cofiesto turu.mp4 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86258EB42F1A30D0006DE89E /* Cofiesto turu.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

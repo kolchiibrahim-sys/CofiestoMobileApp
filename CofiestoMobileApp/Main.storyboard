@@ -147,16 +147,16 @@
                                 <rect key="frame" x="0.0" y="172" width="393" height="280"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="0CR-Sl-a7t"/>
+                                    <constraint firstAttribute="height" constant="280" id="q79-bY-dTE"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yjp-pa-jA7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rhQ-JQ-PjI" firstAttribute="top" secondItem="yjp-pa-jA7" secondAttribute="top" id="3JD-Cc-UeH"/>
-                            <constraint firstItem="rhQ-JQ-PjI" firstAttribute="trailing" secondItem="yjp-pa-jA7" secondAttribute="trailing" id="OqI-Kg-VjW"/>
-                            <constraint firstItem="rhQ-JQ-PjI" firstAttribute="leading" secondItem="yjp-pa-jA7" secondAttribute="leading" id="anD-3k-Lny"/>
+                            <constraint firstItem="rhQ-JQ-PjI" firstAttribute="trailing" secondItem="yjp-pa-jA7" secondAttribute="trailing" id="HCw-S7-GF6"/>
+                            <constraint firstItem="rhQ-JQ-PjI" firstAttribute="top" secondItem="yjp-pa-jA7" secondAttribute="top" id="crI-DG-KWx"/>
+                            <constraint firstItem="rhQ-JQ-PjI" firstAttribute="leading" secondItem="yjp-pa-jA7" secondAttribute="leading" id="hsh-TM-sC9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2GE-Na-yfQ"/>
