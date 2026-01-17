@@ -15,48 +15,52 @@ class CoffeeBeanCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        [logoImageView, titleLabel, flavorLabel].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-        }
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        flavorLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
 
-        setupConstraints()
-        setupStyling()
-    }
-
-    private func setupConstraints() {
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
-            logoImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            logoImageView.widthAnchor.constraint(equalToConstant: 60),
-            logoImageView.heightAnchor.constraint(equalToConstant: 60),
+            logoImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            logoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            logoImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
 
-            titleLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 8),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            titleLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 6),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 6),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -6),
 
-            flavorLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
-            flavorLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            flavorLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            flavorLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
+            flavorLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
+            flavorLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 6),
+            flavorLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -6),
+            flavorLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
         ])
-    }
 
-    private func setupStyling() {
+        backgroundColor = .clear
+
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 12
-        contentView.layer.masksToBounds = false
-        contentView.layer.shadowColor = UIColor.black.cgColor
-        contentView.layer.shadowOpacity = 0.08
-        contentView.layer.shadowRadius = 6
-        contentView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        contentView.layer.masksToBounds = true
 
-        titleLabel.font = .systemFont(ofSize: 16, weight: .semibold)
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.08
+        layer.shadowRadius = 6
+        layer.shadowOffset = CGSize(width: 0, height: 3)
+        layer.masksToBounds = false
+
+        titleLabel.font = .systemFont(ofSize: 15, weight: .semibold)
         titleLabel.textAlignment = .center
+        titleLabel.numberOfLines = 1
 
         flavorLabel.font = .systemFont(ofSize: 13, weight: .regular)
         flavorLabel.textColor = .gray
         flavorLabel.textAlignment = .center
+        flavorLabel.numberOfLines = 1
+        flavorLabel.adjustsFontSizeToFitWidth = true
+        flavorLabel.minimumScaleFactor = 0.85
+        flavorLabel.lineBreakMode = .byTruncatingTail
 
-        logoImageView.contentMode = .scaleAspectFit
+        logoImageView.contentMode = .scaleAspectFill
+        logoImageView.clipsToBounds = true
     }
 }
