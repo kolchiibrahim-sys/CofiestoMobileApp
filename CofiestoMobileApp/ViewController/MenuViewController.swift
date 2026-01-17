@@ -61,7 +61,6 @@ extension MenuViewController {
             return
         }
 
-        // Section OFF (2-ci şəkil stili)
         allSections = [("All", items)]
         filteredSections = allSections
 
